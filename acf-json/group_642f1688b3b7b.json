@@ -1,11 +1,11 @@
 {
-    "key": "group_62df104dacaa3",
-    "title": "Header",
+    "key": "group_642f1688b3b7b",
+    "title": "Social Links",
     "fields": [
         {
-            "key": "field_62df105579a2f",
-            "label": "Header Logo",
-            "name": "header_logo",
+            "key": "field_642f16885b298",
+            "label": "Icon",
+            "name": "icon",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -17,7 +17,6 @@
                 "id": ""
             },
             "return_format": "array",
-            "preview_size": "medium",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -25,15 +24,16 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": ""
+            "mime_types": "",
+            "preview_size": "medium"
         }
     ],
     "location": [
         [
             {
-                "param": "options_page",
+                "param": "nav_menu_item",
                 "operator": "==",
-                "value": "acf-options-header"
+                "value": "location\/social-links"
             }
         ]
     ],
@@ -46,5 +46,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681403729
+    "modified": 1680807590
 }

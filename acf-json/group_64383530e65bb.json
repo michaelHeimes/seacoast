@@ -1,13 +1,13 @@
 {
-    "key": "group_62df104dacaa3",
-    "title": "Header",
+    "key": "group_64383530e65bb",
+    "title": "Default Page",
     "fields": [
         {
-            "key": "field_62df105579a2f",
-            "label": "Header Logo",
-            "name": "header_logo",
+            "key": "field_64383531353cc",
+            "label": "Page Banner",
+            "name": "page_banner",
             "aria-label": "",
-            "type": "image",
+            "type": "clone",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,24 +16,21 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
+            "clone": [
+                "field_64382ce5c314c"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         }
     ],
     "location": [
         [
             {
-                "param": "options_page",
+                "param": "page_template",
                 "operator": "==",
-                "value": "acf-options-header"
+                "value": "default"
             }
         ]
     ],
@@ -46,5 +43,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681403729
+    "modified": 1681405281
 }
