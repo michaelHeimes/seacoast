@@ -3,7 +3,6 @@
 register_nav_menus(
 	array(
 		'main-nav'		=> __( 'The Main Menu', 'trailhead' ),		// Main nav in header
-		'region-nav'		=> __( 'The Region Menu', 'trailhead' ),		// Utility nav in header
 		'offcanvas-nav'	=> __( 'The Off-Canvas Menu', 'trailhead' ),	// Off-Canvas nav
 		'footer-links'	=> __( 'Footer Links', 'trailhead' ),		// Secondary nav in footer
 		'social-links'	=> __( 'Social Links', 'trailhead' ),		// Secondary nav in footer	
@@ -27,21 +26,7 @@ function seacoast_top_nav() {
 	));
 }
 
-// The Top Menu
-function seacoast_region_nav() {
-	wp_nav_menu(array(
-		'container'			=> false,						// Remove nav container
-		'menu_id'			=> 'region-nav',					// Adding custom nav id
-		'menu_class'		=> 'medium-horizontal menu display-on-load',	// Adding custom nav class
-		'items_wrap'		=> '<ul class="%1$s %2$s" data-responsive-menu="accordion tablet-dropdown" data-hover-delay="0" data-closing-time="0" style="visibility: hidden;">%3$s</ul>',
-		'theme_location'	=> 'region-nav',					// Where it's located in the theme
-		'depth'				=> 5,							// Limit the depth of the nav
-		'fallback_cb'		=> false,						// Fallback function (see below)
-		'walker'			=> new Topbar_Menu_Walker(),
-		'link_before'    => '<span>',
-		'link_after'     => '</span>'	
-	));
-}
+
 
 // Big thanks to Brett Mason (https://github.com/brettsmason) for the awesome walker
 class Topbar_Menu_Walker extends Walker_Nav_Menu {

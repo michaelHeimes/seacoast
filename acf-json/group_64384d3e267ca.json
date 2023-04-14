@@ -137,7 +137,7 @@
             "min": 0,
             "max": 0,
             "collapsed": "",
-            "button_label": "Add Row",
+            "button_label": "Add Member",
             "rows_per_page": 20,
             "sub_fields": [
                 {
@@ -146,7 +146,7 @@
                     "name": "photo",
                     "aria-label": "",
                     "type": "image",
-                    "instructions": "390px X 390px",
+                    "instructions": "Minimum 390px X 390px",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -328,7 +328,7 @@
             "min": 0,
             "max": 0,
             "collapsed": "",
-            "button_label": "Add Row",
+            "button_label": "Add Link",
             "rows_per_page": 20,
             "sub_fields": [
                 {
@@ -372,7 +372,7 @@
                     "name": "image",
                     "aria-label": "",
                     "type": "image",
-                    "instructions": "Minimum 734px X 414px",
+                    "instructions": "Minimum 735px X 414px",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -493,10 +493,10 @@
         },
         {
             "key": "field_64385f2778ffc",
-            "label": "Locations Map Shortcode",
-            "name": "locations_map_shortcode",
+            "label": "Locations Map Embed Code",
+            "name": "locations_map_embed_code",
             "aria-label": "",
-            "type": "text",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -507,9 +507,9 @@
             },
             "default_value": "",
             "maxlength": "",
+            "rows": "",
             "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "new_lines": ""
         },
         {
             "key": "field_64385c1978ffb",
@@ -674,5 +674,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681421223
+    "modified": 1681478795
 }

@@ -6,7 +6,7 @@
  */
 ?>
 
-<div class="top-bar-wrap grid-container fluid">
+<div class="top-bar-wrap grid-container fluid blue-bg">
 
 	<div class="top-bar" id="top-bar-menu">
 	
@@ -44,7 +44,26 @@
 		<div class="top-bar-right show-for-tablet">
 			<div class="grid-x align-right">
 				<div class="cell shrink">
-					<?php seacoast_region_nav(); ?>	
+					<div class="grid-x align-right">
+						<div class="cell shrink">
+							<?php seacoast_top_nav(); ?>	
+						</div>
+						<?php if( get_field('playerfirst_login', 'option') ):?>
+						<div class="cell shrink">
+							<a class="playerfirst-login" href="<?php the_field('playerfirst_login');?>" target="_blank">
+								<?php if( !empty( get_field('playerfirst_logo', 'option') ) ) {
+									$imgID = get_field('playerfirst_logo', 'option')['ID'];
+									$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
+									$img = wp_get_attachment_image( $imgID, 'full', false, [ "class" => "", "alt"=>$img_alt] );
+									echo '<span class="logo-wrap">';
+									echo $img;
+									echo '</span>';
+								}?>
+								<span>Playerfirst Login</span>
+							</a>
+						</div>
+						<?php endif;?>
+					</div>
 				</div>
 			</div>
 		</div>

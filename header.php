@@ -19,7 +19,8 @@
 	
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+	
 
 	<?php wp_head(); ?>
 </head>
@@ -29,7 +30,7 @@
 			<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'trailhead' ); ?></a>
 		
 			<div class="sticky-container">
-				<header class="site-header" role="banner" data-sticky data-margin-top="0" data-sticky-on="small">
+				<header class="site-header blue-bg" role="banner" data-sticky data-margin-top="0" data-sticky-on="small">
 					<?php get_template_part( 'template-parts/nav', 'offcanvas-topbar' ); ?>
 				</header><!-- #masthead -->
 			</div>

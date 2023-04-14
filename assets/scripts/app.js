@@ -142,6 +142,18 @@
             
         });
     }
+    
+    _app.news_events_slider = function() {
+        var neSwiper = new Swiper(".news-events-slider", {
+            slidesPerView: 3,
+            spaceBetween: 42,
+            loop: true,
+            navigation: {
+                nextEl: ".ne-swiper-button-next",
+                prevEl: ".ne-swiper-button-prev",
+            },
+        });
+    }
             
     _app.init = function() {
         
@@ -152,7 +164,7 @@
         _app.display_on_load();
         
         // Custom Functions
-        //_app.mobile_takover_nav();
+        _app.news_events_slider();
     }
     
     

@@ -251,8 +251,8 @@
         },
         {
             "key": "field_643877010da57",
-            "label": "Small Header",
-            "name": "social_small_header",
+            "label": "Small Heading",
+            "name": "social_small_heading",
             "aria-label": "",
             "type": "wysiwyg",
             "instructions": "Bold words will be in the blue color.",
@@ -288,5 +288,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681422308
+    "modified": 1681498377
 }
