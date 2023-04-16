@@ -15,7 +15,7 @@
  // Foundation Utilities
  // https://get.foundation/sites/docs/javascript-utilities.html
  //@prepros-prepend vendor/foundation/js/plugins/foundation.util.box.min.js
- //@*prepros-prepend vendor/foundation/js/plugins/foundation.util.imageLoader.min.js
+ //@prepros-prepend vendor/foundation/js/plugins/foundation.util.imageLoader.min.js
  //@prepros-prepend vendor/foundation/js/plugins/foundation.util.keyboard.min.js
  //@prepros-prepend vendor/foundation/js/plugins/foundation.util.mediaQuery.min.js
  //@*prepros-prepend vendor/foundation/js/plugins/foundation.util.motion.min.js
@@ -41,7 +41,7 @@
 //@*prepros-prepend vendor/foundation/js/plugins/foundation.responsiveToggle.js
 
 // Equalize heights
-//@*prepros-prepend vendor/foundation/js/plugins/foundation.equalizer.js
+//@prepros-prepend vendor/foundation/js/plugins/foundation.equalizer.js
 
 // Responsive Images
 //@prepros-prepend vendor/foundation/js/plugins/foundation.interchange.js
@@ -145,12 +145,46 @@
     
     _app.news_events_slider = function() {
         var neSwiper = new Swiper(".news-events-slider", {
-            slidesPerView: 3,
+            slidesPerView: 1,
             spaceBetween: 42,
             loop: true,
             navigation: {
                 nextEl: ".ne-swiper-button-next",
                 prevEl: ".ne-swiper-button-prev",
+            },
+            breakpoints: {
+                560: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+    }
+    
+    _app.aff_slider = function() {
+        var neSwiper = new Swiper(".aff-slider", {
+            slidesPerView: 1,
+            spaceBetween: 42,
+            loop: true,
+        });
+    }
+    
+    _app.alumni_slider = function() {
+        var neSwiper = new Swiper(".alumni-slider", {
+            slidesPerView: 1,
+            spaceBetween: 16,
+            loop: true,
+            navigation: {
+                nextEl: ".alumni-swiper-button-next",
+                prevEl: ".alumni-swiper-button-prev",
+            },
+            breakpoints: {
+                540: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                },
             },
         });
     }
@@ -165,6 +199,8 @@
         
         // Custom Functions
         _app.news_events_slider();
+        _app.aff_slider();
+        _app.alumni_slider();
     }
     
     

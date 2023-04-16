@@ -112,7 +112,7 @@ $breakpoints: (
   "tablet": 900px,
   "large": 1024px,
   "xlarge": 1200px,
-  "xxlarge": 1440px,
+  "xxlarge": 1288px,
 );
 $breakpoints-hidpi: (
   "hidpi-1": 1,
@@ -141,10 +141,10 @@ $block-grid-max: 8;
 // ------------------
 
 $header-font-family: $heading-font;
-$header-font-weight: $global-weight-normal;
+$header-font-weight: 700;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
-$header-color: inherit;
+$header-color: $heading-blue;
 $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
 $header-styles: (
@@ -294,22 +294,22 @@ $breadcrumbs-item-separator-color: $medium-gray;
 // 11. Button
 // ----------
 
-$button-font-family: inherit;
+$button-font-family: $heading-font;
 $button-font-weight: null;
-$button-padding: 0.85em 1em;
-$button-margin: 0 0 $global-margin 0;
+$button-padding: 0.8125em 2.305em;
+$button-margin: 0;
 $button-fill: solid;
 $button-background: $primary-color;
 $button-background-hover: scale-color($button-background, $lightness: -15%);
-$button-color: $white;
+$button-color: $heading-blue;
 $button-color-alt: $black;
 $button-radius: $global-radius;
-$button-border: 1px solid transparent;
+$button-border: 0px solid transparent;
 $button-hollow-border-width: 1px;
 $button-sizes: (
   "tiny": 0.6rem,
   "small": 0.75rem,
-  "default": 0.9rem,
+  "default": 1rem,
   "large": 1.25rem,
 );
 $button-palette: $foundation-palette;
@@ -873,8 +873,8 @@ $tooltip-radius: $global-radius;
 // -----------
 
 $topbar-padding: 0.5rem;
-$topbar-background: $color-blue;
-$topbar-submenu-background: $color-blue;
+$topbar-background: $blue-color;
+$topbar-submenu-background: $blue-color;
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;

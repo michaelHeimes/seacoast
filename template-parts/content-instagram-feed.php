@@ -3,16 +3,17 @@
 ?>
 <section class="instagram-feed">
 	<div class="grid-container">
-		<div class="grid-x grid-padding-x">
+		<div class="grid-x grid-padding-x align-middle">
 			<div class="left cell small-14 tablet-7">
-				<div class="section-header big-small-wrap text-center">
-					<?php if( !empty( get_field('social_large_heading', 'option') ) ):?>
-					<h2 class="large-heading"><?php the_field('social_large_heading', 'option');?></h2>
-					<?php endif;?>
-					<?php if( !empty( get_field('social_small_heading', 'option') ) ):?>
-					<h3 class="small-heading"><?php the_field('social_small_heading', 'option');?></h3>
-					<?php endif;?>
-				</div>
+				<?php if( !empty(get_field('social_large_heading', 'option')) || !empty(get_field('social_small_heading', 'option')) ) {
+					get_template_part('template-parts/part', 'big-small-header', 
+						array(
+							'big' => get_field('social_large_heading', 'option'),
+							'small' => get_field('social_small_heading', 'option'),
+							'color' => '',
+						),
+					);
+				};?>
 			</div>
 			<div class="right cell small-14 tablet-7">
 				<?php echo do_shortcode( $shortcode );?>

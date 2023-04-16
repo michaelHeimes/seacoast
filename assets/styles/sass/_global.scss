@@ -31,6 +31,19 @@ svg {
 	position: relative;
 }
 
+button,
+.button,
+a.button {
+	text-transform: uppercase;
+	font-weight: 700;
+	
+	&.light-blue {
+		color: $white;
+		background-color: $light-blue;
+	}
+	
+}
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/

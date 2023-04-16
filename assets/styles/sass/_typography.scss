@@ -20,3 +20,14 @@ h4,
 .white-color {
 	color: $white;
 }
+
+.yellow-color {
+	color: $yellow-color;
+}
+
+.yellow-bold {
+	b,
+	strong {
+		color: $yellow-color;
+	}
+}

@@ -82,8 +82,8 @@
                 },
                 {
                     "key": "field_64382f11bd345",
-                    "label": "Image",
-                    "name": "image",
+                    "label": "Logo",
+                    "name": "logo",
                     "aria-label": "",
                     "type": "image",
                     "instructions": "",
@@ -288,5 +288,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681498377
+    "modified": 1681589814
 }
