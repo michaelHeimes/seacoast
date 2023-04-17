@@ -34,6 +34,11 @@
 	filter: grayscale(1);
 }
 
+.light-blue-bg {
+	background-color: $light-blue-color;
+	color: $white;
+}
+
 .blue-bg {
 	background-color: $blue-color;
 	color: $white;
@@ -41,6 +46,7 @@
 
 .heading-blue-bg {
 	background-color: $heading-blue;
+	color: $white;
 }
 
 .white-bg {
@@ -76,4 +82,8 @@
 
 .gradient-ld {
 	background: linear-gradient(-180deg, rgba(0, 86, 151, 0.937) 0%, #20334a 100%);
+}
+
+.card-shadow {
+	box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
 }

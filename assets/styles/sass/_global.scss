@@ -39,9 +39,17 @@ a.button {
 	
 	&.light-blue {
 		color: $white;
-		background-color: $light-blue;
+		background-color: $light-blue-color;
 	}
 	
+}
+
+.tablepress {
+	visibility: hidden;
+	th {
+		font-family: $heading-font;
+		font-weight: 400;
+	}
 }
 
 /*********************

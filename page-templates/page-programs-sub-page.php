@@ -1,6 +1,6 @@
 <?php
 /**
- * Template name: League Page
+ * Template name: Program Sub-page
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -16,8 +16,7 @@ $fields = get_fields();
 			<main id="primary" class="site-main">
 		
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				
-				
+					
 					<?php if( !empty( $fields['page_banner'] ) ) {
 						get_template_part('template-parts/part', 'page-banner', 
 							array(
@@ -109,10 +108,27 @@ $fields = get_fields();
 							</div>
 						</div>
 					</div>
+					
+					<section>
+						<div class="grid-container">
+							<div class="grid-x grid-padding-x align-center">
+								<div class="cell small-14">
+									<?php if( !empty( $fields['table_header']) ):?>
+										<h2 class="h3 text-center underline">
+											<?php echo $fields['table_header'];?>
+										</h2>
+									<?php endif;?>
+									<?php if ( !empty($fields['table_shortcode']) ) {
+										echo do_shortcode($fields['table_shortcode']);
+									}?>
+								</div>
+							</div>
+						</div>
+					</section>
 							
 					<footer class="article-footer">
 					</footer> <!-- end article footer -->
-						
+					
 				</article><!-- #post-<?php the_ID(); ?> -->
 		
 			</main><!-- #main -->

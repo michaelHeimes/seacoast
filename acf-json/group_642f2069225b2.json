@@ -49,8 +49,8 @@
         },
         {
             "key": "field_642f2069b0f02",
-            "label": "Date(s)",
-            "name": "dates",
+            "label": "Date(s) for single post banner",
+            "name": "dates_for_single_post_banner",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -66,6 +66,72 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_643c51932e2f4",
+            "label": "Date(s) for archive card",
+            "name": "dates_for_archive_card",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_643c51ac2e2f5",
+                    "label": "Type",
+                    "name": "type",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_643c51932e2f4"
+                },
+                {
+                    "key": "field_643c51c52e2f6",
+                    "label": "Date(s)",
+                    "name": "dates",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_643c51932e2f4"
+                }
+            ]
         },
         {
             "key": "field_642f2080b0f03",
@@ -558,5 +624,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681424697
+    "modified": 1681674712
 }

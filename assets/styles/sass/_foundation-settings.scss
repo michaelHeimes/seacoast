@@ -149,19 +149,19 @@ $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
 $header-styles: (
   "small": (
-    'h1': ('font-size': 24),
+    'h1': ('font-size': 33),
     'h2': ('font-size': 20),
-    'h3': ('font-size': 19),
-    'h4': ('font-size': 18),
-    'h5': ('font-size': 17),
-    'h6': ('font-size': 16),
+    'h3': ('font-size': 18),
+    'h4': ('font-size': 17),
+    'h5': ('font-size': 16),
+    'h6': ('font-size': 15),
   ),
   "medium": (
-    'h1': ('font-size': 48),
-    'h2': ('font-size': 40),
-    'h3': ('font-size': 31),
-    'h4': ('font-size': 25),
-    'h5': ('font-size': 20),
+    'h1': ('font-size': 50),
+    'h2': ('font-size': 30),
+    'h3': ('font-size': 20),
+    'h4': ('font-size': 18),
+    'h5': ('font-size': 17),
     'h6': ('font-size': 16),
   ),
 );
@@ -240,12 +240,12 @@ $accordion-background: $white;
 $accordion-plusminus: true;
 $accordion-plus-content: '\002B';
 $accordion-minus-content: '\2013';
-$accordion-title-font-size: rem-calc(12);
+$accordion-title-font-size: inherit;
 $accordion-item-color: $primary-color;
 $accordion-item-background-hover: $light-gray;
 $accordion-item-padding: 1.25rem 1rem;
 $accordion-content-background: $white;
-$accordion-content-border: 1px solid $light-gray;
+$accordion-content-border: 0px solid $light-gray;
 $accordion-content-color: $body-font-color;
 $accordion-content-padding: 1rem;
 
@@ -800,15 +800,15 @@ $switch-cursor-disabled: not-allowed;
 
 $table-background: $white;
 $table-color-scale: 5%;
-$table-border: 1px solid smart-scale($table-background, $table-color-scale);
-$table-padding: rem-calc(8 10 10);
-$table-hover-scale: 2%;
-$table-row-hover: darken($table-background, $table-hover-scale);
-$table-row-stripe-hover: darken($table-background, $table-color-scale + $table-hover-scale);
-$table-is-striped: true;
+$table-border: 0px solid smart-scale($table-background, $table-color-scale);
+$table-padding: rem-calc(8 0 10);
+$table-hover-scale: 0%;
+$table-row-hover: $white;
+$table-row-stripe-hover: $white;
+$table-is-striped: false;
 $table-striped-background: smart-scale($table-background, $table-color-scale);
 $table-stripe: even;
-$table-head-background: smart-scale($table-background, $table-color-scale * 0.5);
+$table-head-background: $white;
 $table-head-row-hover: darken($table-head-background, $table-hover-scale);
 $table-foot-background: smart-scale($table-background, $table-color-scale);
 $table-foot-row-hover: darken($table-foot-background, $table-hover-scale);

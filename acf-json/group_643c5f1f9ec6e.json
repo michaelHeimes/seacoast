@@ -1,9 +1,9 @@
 {
-    "key": "group_643830823f599",
-    "title": "League Detail Page",
+    "key": "group_643c5f1f9ec6e",
+    "title": "League Sub-page",
     "fields": [
         {
-            "key": "field_643830825ee16",
+            "key": "field_643c5f1fcd572",
             "label": "Page Banner",
             "name": "page_banner_clone",
             "aria-label": "",
@@ -25,7 +25,7 @@
             "prefix_name": 0
         },
         {
-            "key": "field_643830b55ee17",
+            "key": "field_643c5f6c057f8",
             "label": "Table Header",
             "name": "table_header",
             "aria-label": "",
@@ -45,7 +45,7 @@
             "append": ""
         },
         {
-            "key": "field_643830bd5ee18",
+            "key": "field_643c5f76057f9",
             "label": "Table Shortcode",
             "name": "table_shortcode",
             "aria-label": "",
@@ -70,7 +70,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "page-templates\/page-league.php"
+                "value": "page-templates\/page-league-sub-page.php"
             }
         ]
     ],
@@ -85,5 +85,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681425702
+    "modified": 1681678410
 }

@@ -219,7 +219,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "page-templates\/page-league-detail.php"
+                "value": "page-templates\/page-league.php"
             }
         ]
     ],
@@ -234,5 +234,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681426669
+    "modified": 1681678513
 }

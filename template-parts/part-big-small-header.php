@@ -3,7 +3,7 @@
 	$small = $args['small'];
 	$color = $args['color'];
 ?>
-<div class="section-header big-small-wrap yellow-bold text-center">
+<div class="section-header big-small-wrap yellow-bold text-center relative">
 	<?php if( !empty( $big ) ):?>
 	<h2 class="large-heading <?php if( !empty($color) ) { echo $color . '-color';}?>"><?php echo $big;?></h2>
 	<?php endif;?>

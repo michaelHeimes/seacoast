@@ -46,7 +46,7 @@
                 {
                     "key": "field_64382d0dc314d",
                     "label": "Large Background Heading",
-                    "name": "large_background_heading",
+                    "name": "large_heading",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -307,5 +307,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681427372
+    "modified": 1681670323
 }

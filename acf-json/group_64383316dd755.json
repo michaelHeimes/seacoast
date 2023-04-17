@@ -1,6 +1,6 @@
 {
     "key": "group_64383316dd755",
-    "title": "Program Detail Page",
+    "title": "Program Sub-page",
     "fields": [
         {
             "key": "field_6438332afb5d0",
@@ -331,7 +331,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "page-templates\/page-programs-detail.php"
+                "value": "page-templates\/page-programs-sub-page.php"
             }
         ]
     ],
@@ -346,5 +346,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681428031
+    "modified": 1681698535
 }

@@ -188,6 +188,40 @@
             },
         });
     }
+    
+    _app.table_register_link = function() {
+        const tablepressTables = document.querySelectorAll(".tablepress");
+        
+        tablepressTables.forEach(function(tablepressTable) {
+            const thElements = tablepressTable.querySelectorAll("th");
+            const colCount = thElements.length;
+            
+            tablepressTable.classList.add('col-count-' + colCount);
+            
+            const trElements = tablepressTable.querySelectorAll("tr");
+            
+            trElements.forEach(function(trElement) {
+                const lastTdElement = trElement.querySelector("td:last-child");
+            
+                if (lastTdElement) {
+                    const url = lastTdElement.innerHTML;
+                    const linkButton = document.createElement("a");
+            
+                    linkButton.setAttribute('href', url);
+                    linkButton.setAttribute('target', '_blank');
+                    linkButton.classList.add('button');
+                    linkButton.classList.add('light-blue-bg');
+                    linkButton.innerHTML = 'Register';
+            
+                    lastTdElement.innerHTML = '';
+                    lastTdElement.appendChild(linkButton);
+                }
+            });
+            
+            tablepressTable.style.visibility = 'visible';
+            
+        });
+    }
             
     _app.init = function() {
         
@@ -201,6 +235,7 @@
         _app.news_events_slider();
         _app.aff_slider();
         _app.alumni_slider();
+        _app.table_register_link();
     }
     
     
