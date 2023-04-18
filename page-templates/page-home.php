@@ -49,7 +49,7 @@ $fields = get_fields();
 								<div class="cell small-12 large-offset-1">
 									<?php if( !empty( $fields['news_events'] ) ): 
 										$news_events =  $fields['news_events']; ?>
-										<div class="news-events-slider">
+										<div class="news-events-slider overflow-hidden">
 											<div class="swiper-wrapper">
 											<?php foreach($news_events as $news_event):
 												$page =  $news_event['page'];
@@ -61,7 +61,7 @@ $fields = get_fields();
 													<?php if( !empty( $image ) ) {
 														$imgID = $image['ID'];
 														$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
-														$img = wp_get_attachment_image( $imgID, 'full', false, [ "class" => "", "alt"=>$img_alt] );
+														$img = wp_get_attachment_image( $imgID, 'event-thumb', false, [ "class" => "", "alt"=>$img_alt] );
 														echo '<div class="img-wrap">';
 														echo $img;
 														echo '</div>';
@@ -84,12 +84,12 @@ $fields = get_fields();
 												</div>
 											<?php endforeach;?>
 											</div>
-											<div class="ne-swiper-button-prev">
-												<?php get_template_part('template-parts/icon', 'slide-prev');?>
-											</div>
-											<div class="ne-swiper-button-next">
-												<?php get_template_part('template-parts/icon', 'slide-next');?>
-											</div>
+										</div>
+										<div class="ne-swiper-button-prev">
+											<?php get_template_part('template-parts/icon', 'slide-prev');?>
+										</div>
+										<div class="ne-swiper-button-next">
+											<?php get_template_part('template-parts/icon', 'slide-next');?>
 										</div>
 									<?php endif;?>
 								</div>

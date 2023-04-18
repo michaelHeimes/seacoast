@@ -17,16 +17,70 @@ $fields = get_fields();
 		
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				
-					<header class="entry-header home-banner text-center">
+					<?php get_template_part('template-parts/part', 'page-banner-text-links');?>
+					
+					<?php if( !empty($fields['image_and_copy']) ) {
+						echo '<div class="relative"><div class="bg gradient-dl"></div>';
+						get_template_part('template-parts/content', 'image-and-copy', 
+							array(
+								'image_and_copy' => $fields['image_and_copy'],
+							)
+						);	
+						echo '</div>';
+					}?>
+					
+					<?php			
+					$args = array(  
+						'post_type' => 'facility',
+						'post_status' => 'publish',
+						'posts_per_page' => -1,
+					);
+					
+					$loop = new WP_Query( $args ); 
+					
+					if ( $loop->have_posts() ) :?>
+					<div class="facilities">
+						<div class="grid-container">
+							<div class="grid-x grid-padding-x align-center">
+								<div class="cell small-14 large-12">
+									<div class="grid-x grid-padding-x small-up-1 medium-up-2 tablet-up-3">
+										
+									<?php
+									while ( $loop->have_posts() ) : $loop->the_post();?>
+									
+									<article id="post-<?php the_ID(); ?>" <?php post_class('cell'); ?>>
+										<a class="inner grid-x flex-dir-column white-bg card-shadow align-center text-center" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
+											<?php if( !empty( get_field('archive_card_image') ) ) {
+												$imgID = get_field('archive_card_image')['ID'];
+												$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
+												$img = wp_get_attachment_image( $imgID, 'full', false, [ "class" => "", "alt"=>$img_alt] );
+												echo '<div class="img-wrap">';
+												echo $img;
+												echo '</div>';
+											}?>
+											<?php if( !empty(get_field('archive_card_location')) ):?>
+												<div>
+													<h3 class="text-center"><?php the_field('archive_card_location');?></h3>
+												</div>
+											<?php endif;?>
+										</a>
+									</article>
+										
+									<?php
+									endwhile;?>
 
-					</header><!-- .entry-header -->
-				
-					<section class="entry-content" itemprop="text">
-						<?php the_content(); ?>
-					</section> <!-- end article section -->
-							
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<?php
+					endif;
+					wp_reset_postdata(); 
+					?>
+								
 					<footer class="article-footer">
-						 <?php wp_link_pages(); ?>
+						<?php wp_link_pages(); ?>
 					</footer> <!-- end article footer -->
 						
 				</article><!-- #post-<?php the_ID(); ?> -->

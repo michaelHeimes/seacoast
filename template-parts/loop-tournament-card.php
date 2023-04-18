@@ -3,7 +3,7 @@
 		<?php if( !empty( get_field('logo') ) ) {
 			$imgID = get_field('logo')['ID'];
 			$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
-			$img = wp_get_attachment_image( $imgID, 'full', false, [ "class" => "", "alt"=>$img_alt] );
+			$img = wp_get_attachment_image( $imgID, 'tournament-thumb', false, [ "class" => "", "alt"=>$img_alt] );
 			echo '<div class="img-wrap">';
 			echo $img;
 			echo '</div>';

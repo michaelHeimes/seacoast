@@ -372,7 +372,7 @@
                     "name": "image",
                     "aria-label": "",
                     "type": "image",
-                    "instructions": "Minimum 735px X 414px",
+                    "instructions": "1040px X 588px",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -674,5 +674,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681478795
+    "modified": 1681761427
 }

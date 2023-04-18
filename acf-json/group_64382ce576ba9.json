@@ -123,7 +123,7 @@
                     "name": "image",
                     "aria-label": "",
                     "type": "image",
-                    "instructions": "",
+                    "instructions": "672px X 526px or 1x SVG",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -140,7 +140,7 @@
                     "max_height": "",
                     "max_size": "",
                     "mime_types": "",
-                    "preview_size": "medium"
+                    "preview_size": "thumbnail"
                 },
                 {
                     "key": "field_64382df24718d",
@@ -247,7 +247,7 @@
                     "name": "image",
                     "aria-label": "",
                     "type": "image",
-                    "instructions": "Minimum 1100px wide",
+                    "instructions": "Minimum 1224px wide",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -307,5 +307,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681670323
+    "modified": 1681761061
 }

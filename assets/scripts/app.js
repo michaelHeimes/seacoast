@@ -222,6 +222,18 @@
             
         });
     }
+    
+    _app.facility_gallery_slider = function() {
+        var neSwiper = new Swiper(".facility-slider", {
+            slidesPerView: 1,
+            spaceBetween: 42,
+            loop: true,
+            navigation: {
+                nextEl: ".facility-swiper-button-next",
+                prevEl: ".facility-swiper-button-prev",
+            },
+        });
+    }
             
     _app.init = function() {
         
@@ -236,6 +248,7 @@
         _app.aff_slider();
         _app.alumni_slider();
         _app.table_register_link();
+        _app.facility_gallery_slider();
     }
     
     

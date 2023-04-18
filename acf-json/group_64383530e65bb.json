@@ -5,7 +5,7 @@
         {
             "key": "field_64383531353cc",
             "label": "Page Banner",
-            "name": "page_banner",
+            "name": "page_banner_clone",
             "aria-label": "",
             "type": "clone",
             "instructions": "",
@@ -43,5 +43,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681405281
+    "modified": 1681737606
 }

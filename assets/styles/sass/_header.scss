@@ -1,9 +1,12 @@
 header.site-header {
+	position: relative;
+	z-index: 5555;
 	transition: transform .5s ease;
 	
 	#top-bar-menu {
 		
 		li.logo {
+			max-width: 160px;
 			@include breakpoint(medium) {
 
 			}
@@ -17,20 +20,45 @@ header.site-header {
 			
 		#main-nav {
 			align-items: center;
+			
+			a {
+				font-size: rem-calc(30);
+				text-transform: uppercase;
+				font-family: $heading-font;
+				color: $white;
+				transition: .25s ease;
+				
+				@include breakpoint(tablet) {
+					font-size: rem-calc(20);
+				}
+				
+				@include breakpoint(xlarge) {
+					font-size: rem-calc(20);
+				}
+				
+			}
+			
 			>li {
-				margin: 0 .3rem 0rem;
+				margin: 1rem 0 1rem 2.5rem;
 				
 				> a {
-					font-size: rem-calc(21);
-					text-transform: uppercase;
-					letter-spacing: 2.1px;
-					padding: 1.78rem 0.5rem 1.78rem;
+					font-weight: 700;
 					position: relative;
+					padding: 0;
 					
-					@include breakpoint(tablet) {
-						font-size: rem-calc(14);
-						letter-spacing: 1.4px;
+				&:hover {
+					color: $primary-color;
+					position: relative;
+					&:after {
+						content: '';
+						position: absolute;
+						left: 0;
+						right: 0;
+						height: 4rem;
+						display: block;
+						top: 100%;
 					}
+				}
 					
 					span {
 						&:before {
@@ -51,17 +79,19 @@ header.site-header {
 				
 			&.is-active,
 			&.current-menu-ancestor {
-				span:before {
-					background-color: $white;
+				a {
+					color: $primary-color;
 				}
 			}
 				
 			&.menu-item-has-children {
 				
 				ul.submenu {
+					margin-top: 2.4rem;
+					background-color: rgba($blue-color, .95);
 					li {
 						a {
-
+							
 							
 						&:hover {
 
@@ -74,6 +104,19 @@ header.site-header {
 	
 			}
 
+			}
+		}
+		
+		a.playerfirst-login {
+			color: $white;
+			text-transform: uppercase;
+			font-weight: 700;
+			font-size: rem-calc(14);
+			line-height: 1.142;
+			margin-left: 2.5rem;
+			margin-left: 4.25rem;
+			.logo-wrap {
+				margin-right: 0.6rem;
 			}
 		}
 		

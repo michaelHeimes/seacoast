@@ -17,7 +17,6 @@ $fields = get_fields();
 		
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				
-				
 					<?php if( !empty( $fields['page_banner'] ) ) {
 						get_template_part('template-parts/part', 'page-banner', 
 							array(
@@ -25,17 +24,7 @@ $fields = get_fields();
 							)
 						);
 					};?>
-				
-					<?php if( !empty($fields['image_and_copy']) ) {
-						echo '<div class="relative"><div class="bg gradient-dl"></div>';
-						get_template_part('template-parts/content', 'image-and-copy', 
-							array(
-								'image_and_copy' => $fields['image_and_copy'],
-							)
-						);	
-						echo '</div>';
-					}?>
-					
+	
 					<div class="entry-content">
 						<div class="grid-container">
 							<div class="grid-x grid-padding-x align-center">

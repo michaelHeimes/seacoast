@@ -44,12 +44,9 @@
 		<div class="top-bar-right show-for-tablet">
 			<div class="grid-x align-right">
 				<div class="cell shrink">
-					<div class="grid-x align-right">
-						<div class="cell shrink">
-							<?php seacoast_top_nav(); ?>	
-						</div>
+					<div class="grid-x align-right align-middle xlarge-flex-dir-row-reverse">
 						<?php if( get_field('playerfirst_login', 'option') ):?>
-						<div class="cell shrink">
+						<div class="cell small-14 xlarge-shrink text-right">
 							<a class="playerfirst-login" href="<?php the_field('playerfirst_login');?>" target="_blank">
 								<?php if( !empty( get_field('playerfirst_logo', 'option') ) ) {
 									$imgID = get_field('playerfirst_logo', 'option')['ID'];
@@ -63,6 +60,9 @@
 							</a>
 						</div>
 						<?php endif;?>
+						<div class="cell small-14 tablet-shrink">
+							<?php seacoast_top_nav(); ?>	
+						</div>
 					</div>
 				</div>
 			</div>
