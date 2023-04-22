@@ -1,8 +1,16 @@
 .page-template-page-home {
 	
 	.entry-header {
+		padding-bottom: 15rem;
+		
 		.bg.bg-1 {
 			background-image: linear-gradient(180deg, $heading-blue 0%, $blue-color 100%);
+		}
+		
+		.bg.bg-img {
+			top: -8rem;
+			background-size: cover;
+			background-position: 50% 100%;
 		}
 		
 		.bg.bg-2 {
@@ -18,10 +26,130 @@
 			left: 7%;
 		}
 		
+		.grid-x {
+			padding-top: 3.4rem;
+		}
+		
+		h1 {
+			span.underline.u-yellow {
+				font-size: rem-calc(168);
+				line-height: 1.07;
+				letter-spacing: .04em;
+				position: relative;
+				z-index: 1;
+				
+				&:before {
+					content: '';
+					display: block;
+					position: absolute;
+					z-index: -1;
+					bottom: .2em;
+					left: 0;
+					width: 100%;
+					height: 1.5rem;
+					background-color: $yellow-color;
+				}
+				
+			}
+			span.yellow-color {
+				font-size: rem-calc(48);
+				line-height: .5;
+				padding-top: 2.68rem;
+				display: inline-block;
+			}
+		}
+		
 	}
 	
 	.news-events {
-		background-image: linear-gradient(180deg, rgba(106, 170, 228, 0) 0%, rgba(73, 144, 204, 0) 4.9%, $blue-color 15.8%, $heading-blue 36.5%, $heading-blue 100%);
+		position: relative;
+		padding-bottom: 0.8rem;
+		
+		.bg {
+			top: 4rem;
+			background-image: linear-gradient(180deg, rgba(106, 170, 228, 0) 0%, rgba(73, 144, 204, 0) 4.9%, $blue-color 15.8%, $heading-blue 36.5%, $heading-blue 100%);
+		}
+		
+		.grid-container {
+			margin-top: -8.95rem;
+		}
+		
+		.section-header {
+			padding-bottom: 1.35rem;
+		}
+		
+		.news-events-slider-wrap {
+			
+			.ne-swiper-button-prev,
+			.ne-swiper-button-next {
+				position: absolute;
+				top: 5.8125rem;
+			}
+			
+			.ne-swiper-button-prev {
+				left: -3.8rem;
+			}
+			
+			.ne-swiper-button-next {
+				right: -3.8rem;
+			}
+			
+			.bottom {
+				padding: 1.94rem 1.7rem;
+			}
+			
+		}
+		
+	}
+	
+	.our-clubs {
+		padding-bottom: 5.1rem;
+		.bg {
+			bottom: 18rem;
+		}
+		.accent-wrap {
+			max-width: 1366px;
+			margin: auto;
+			svg {
+				transform: translateX(-2.25rem);
+			}
+		}
+		.section-header {
+			margin-bottom: 4.25rem;
+			
+			h3.h2.small-heading {
+				font-size: rem-calc(24);
+			}
+			
+		}
+		.region-cards {
+			margin-left: -.6875rem;
+			margin-right: -.6875rem;
+			.cell.region-card {
+				padding-left: .6875rem;
+				padding-right: .6875rem;
+				margin-bottom: 1.375rem;
+				
+				> .inner {
+					padding-top: 1.4rem;
+					> * {
+						width: 100%;
+					}
+					ul {
+						padding-bottom: 1rem;
+					}
+				}
+				
+			}
+		}
+		.club-logos {
+			padding-top: 0.5rem;
+		}
+	}
+	
+	.about {
+		padding-top: 4.4375rem;
+
 	}
 	
 }

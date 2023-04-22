@@ -18,25 +18,24 @@ $fields = get_fields();
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				
 					<header class="entry-header home-hero has-object-fit">
+						<div class="bg bg-img" style="background-image: url(<?php echo $fields['hero_image']['url'];?>)"></div>
 						<div class="bg bg-1"></div>
-						<?php if( !empty( $fields['hero_image'] ) ) {
-							$imgID = $fields['hero_image']['ID'];
-							$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
-							$img = wp_get_attachment_image( $imgID, 'full', false, [ "class" => "object-fit of-cover grayscale", "alt"=>$img_alt] );
-							echo $img;
-						}?>
+						<?php if( !empty( $fields['hero_image'] ) ):?>
+							<div class="bg bg-img grayscale" style="background-image: url(<?php echo $fields['hero_image']['url'];?>)"></div>
+						<?php endif;?>
 						<div class="bg mask"></div>
 						<div class="bg bg-2"></div>
 						<div class="grid-container relative">
 							<div class="grid-x grid-padding-x align-center">
 								<div class="cell small-14 large-12">
-									<h1 class="white-color"><span class="underline u-yellow">Seacoast</span><br><span class="underline u-yellow">United</span><br><span class="yellow-color">Soccer Club</span></h1>
+									<h1 class="white-color text-shadow"><span class="underline u-yellow">Seacoast</span><br><span class="underline u-yellow">United</span><br><span class="yellow-color">Soccer Club</span></h1>
 								</div>
 							</div>
 						</div>
 					</header>
 				
-					<section class="news-events">
+					<section class="news-events has-bg">
+						<div class="bg"></div>
 						<div class="grid-container relative">
 							<div class="grid-x grid-padding-x align-center">
 								<?php if( !empty( $fields['news_events_heading'] ) ):?>
@@ -49,47 +48,49 @@ $fields = get_fields();
 								<div class="cell small-12 large-offset-1">
 									<?php if( !empty( $fields['news_events'] ) ): 
 										$news_events =  $fields['news_events']; ?>
-										<div class="news-events-slider overflow-hidden">
-											<div class="swiper-wrapper">
-											<?php foreach($news_events as $news_event):
-												$page =  $news_event['page'];
-												$image =  $news_event['image'];	
-												$title =  $news_event['title'];	
-												$info =  $news_event['info'];	
-											?>
-												<div class="swiper-slide grid-x flex-dir-column dark-blue-bg h-auto">
-													<?php if( !empty( $image ) ) {
-														$imgID = $image['ID'];
-														$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
-														$img = wp_get_attachment_image( $imgID, 'event-thumb', false, [ "class" => "", "alt"=>$img_alt] );
-														echo '<div class="img-wrap">';
-														echo $img;
-														echo '</div>';
-													}?>
-													<div class="bottom grid-x flex-dir-column flex-child-auto align-justify">
-														<div>
-															<?php if( !empty($title) ):?>
-																<h3 class="white-color"><?php echo $title;?></h3>
-															<?php endif;?>
-															<?php if( !empty($info) ):?>
-																<p><?php echo $info;?></p>
+										<div class="news-events-slider-wrap relative">
+											<div class="news-events-slider overflow-hidden">
+												<div class="swiper-wrapper">
+												<?php foreach($news_events as $news_event):
+													$page =  $news_event['page'];
+													$image =  $news_event['image'];	
+													$title =  $news_event['title'];	
+													$info =  $news_event['info'];	
+												?>
+													<div class="swiper-slide card-shadow grid-x flex-dir-column dark-blue-bg h-auto">
+														<?php if( !empty( $image ) ) {
+															$imgID = $image['ID'];
+															$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
+															$img = wp_get_attachment_image( $imgID, 'event-thumb', false, [ "class" => "", "alt"=>$img_alt] );
+															echo '<div class="img-wrap">';
+															echo $img;
+															echo '</div>';
+														}?>
+														<div class="bottom grid-x flex-dir-column flex-child-auto align-justify">
+															<div>
+																<?php if( !empty($title) ):?>
+																	<h3 class="white-color"><?php echo $title;?></h3>
+																<?php endif;?>
+																<?php if( !empty($info) ):?>
+																	<p><?php echo $info;?></p>
+																<?php endif;?>
+															</div>
+															<?php if( !empty($page) ):?>
+															<div>
+																<a class="button" href="<?php echo $page;?>">Learn More</a>
+															</div>
 															<?php endif;?>
 														</div>
-														<?php if( !empty($page) ):?>
-														<div>
-															<a class="button" href="<?php echo $page;?>">Learn More</a>
-														</div>
-														<?php endif;?>
 													</div>
+												<?php endforeach;?>
 												</div>
-											<?php endforeach;?>
 											</div>
-										</div>
-										<div class="ne-swiper-button-prev">
-											<?php get_template_part('template-parts/icon', 'slide-prev');?>
-										</div>
-										<div class="ne-swiper-button-next">
-											<?php get_template_part('template-parts/icon', 'slide-next');?>
+											<div class="ne-swiper-button-prev">
+												<?php get_template_part('template-parts/icon', 'slide-prev');?>
+											</div>
+											<div class="ne-swiper-button-next">
+												<?php get_template_part('template-parts/icon', 'slide-next');?>
+											</div>
 										</div>
 									<?php endif;?>
 								</div>
@@ -97,7 +98,12 @@ $fields = get_fields();
 						</div>
 					</section>
 					
-					<section class="our-clubs dark-blue-bg">
+					<section class="our-clubs has-bg">
+						<div class="bg heading-blue-bg"></div>
+						<div class="accent-wrap overflow-hidden">
+							<svg xmlns="http://www.w3.org/2000/svg" width="262.92" height="124.92" viewBox="-0.14 -0.04 262.91 124.96"><g transform="translate(-14.088 -1327.1)" data-name="Group 324"><g transform="translate(-396 862)" data-name="Group 307"><path transform="translate(-10280 2974.1) rotate(-45)" d="m9361.7 5889.5-60.949-19.2 12.951-12.952 35.958 12.15-12.576-35.532 12.621-12.621 19.955 60.191z" fill="#d7e352" data-name="Path 333"></path><g transform="translate(-10283 3002.1) rotate(-45)" fill="none" data-name="Path 333"><path d="m9361.7 5889.5-60.949-19.2 12.951-12.952 35.958 12.15-12.576-35.532 12.621-12.621 19.955 60.191z"></path><path d="m9361.4 5888.4 7.0947-7.0962-19.251-58.067-11.028 11.029 13.052 36.876-37.318-12.61-11.347 11.347 58.798 18.521m0.27832 1.1362-60.949-19.199 12.951-12.952 35.958 12.15-12.576-35.532 12.621-12.621 19.955 60.191-7.96 7.9614z" fill="#d7e352"></path></g><path transform="translate(-10325 2974.1) rotate(-45)" d="m9326 5879.5" fill="none" stroke="#d7e352" stroke-width="20" data-name="Path 336"></path></g><g transform="translate(-315 862)" data-name="Group 309"><path transform="translate(-10280 2974.1) rotate(-45)" d="m9361.7 5889.5-60.949-19.2 12.951-12.952 35.958 12.15-12.576-35.532 12.621-12.621 19.955 60.191z" fill="#d7e352" data-name="Path 333"></path><g transform="translate(-10283 3002.1) rotate(-45)" fill="none" data-name="Path 333"><path d="m9361.7 5889.5-60.949-19.2 12.951-12.952 35.958 12.15-12.576-35.532 12.621-12.621 19.955 60.191z"></path><path d="m9361.4 5888.4 7.0947-7.0962-19.251-58.067-11.028 11.029 13.052 36.876-37.318-12.61-11.347 11.347 58.798 18.521m0.27832 1.1362-60.949-19.199 12.951-12.952 35.958 12.15-12.576-35.532 12.621-12.621 19.955 60.191-7.96 7.9614z" fill="#d7e352"></path></g><path transform="translate(-10325 2974.1) rotate(-45)" d="m9326 5879.5" fill="none" stroke="#d7e352" stroke-width="20" data-name="Path 336"></path></g><g transform="translate(-233 862)" data-name="Group 310"><path transform="translate(-10280 2974.1) rotate(-45)" d="m9361.7 5889.5-60.949-19.2 12.951-12.952 35.958 12.15-12.576-35.532 12.621-12.621 19.955 60.191z" fill="#d7e352" data-name="Path 333"></path><g transform="translate(-10283 3002.1) rotate(-45)" fill="none" data-name="Path 333"><path d="m9361.7 5889.5-60.949-19.2 12.951-12.952 35.958 12.15-12.576-35.532 12.621-12.621 19.955 60.191z"></path><path d="m9361.4 5888.4 7.0947-7.0962-19.251-58.067-11.028 11.029 13.052 36.876-37.318-12.61-11.347 11.347 58.798 18.521m0.27832 1.1362-60.949-19.199 12.951-12.952 35.958 12.15-12.576-35.532 12.621-12.621 19.955 60.191-7.96 7.9614z" fill="#d7e352"></path></g><path transform="translate(-10325 2974.1) rotate(-45)" d="m9326 5879.5" fill="none" stroke="#d7e352" stroke-width="20" data-name="Path 336"></path></g></g></svg>
+
+						</div>
 						<div class="grid-container relative">
 							<div class="grid-x grid-padding-x">
 								<div class="left cell small-14 medium-10 medium-offset-2 tablet-7 tablet-offset-0 large-10">
@@ -121,7 +127,7 @@ $fields = get_fields();
 
 										?>
 											<div class="region-card cell">
-												<div class="inner white-bg h-100 grid-x align-center">
+												<div class="inner white-bg h-100 grid-x align-center card-shadow">
 													<?php if( !empty( $logo ) ) {
 														$imgID = $logo['ID'];
 														$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
@@ -165,7 +171,7 @@ $fields = get_fields();
 									?>
 									<div class="grid-x grid-padding-x align-center">
 										<div class="cell small-12 tablet-10">
-											<div class="club-logos grid-x grid-padding-x grid-12 small-up-2 tablet-up-3 large-up-4">
+											<div class="club-logos grid-x grid-padding-x grid-12 small-up-2 tablet-up-3 large-up-4 align-middle">
 												<?php foreach( $our_clubs_logos as $logo ):?>
 													<?php if( !empty( $logo ) ) {
 														$imgID = $logo['ID'];

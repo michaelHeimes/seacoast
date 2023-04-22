@@ -1,3 +1,33 @@
+.page-template-page-home {
+	header.site-header {
+		background-image: linear-gradient(0deg, rgba($blue-color, 0.937) 0%, $heading-blue 100%);
+
+		#top-bar-menu.top-bar {
+						
+			ul#main-nav {
+				padding-top: 4.38rem;
+				margin-bottom: -1.129rem;
+				
+				li.logo {
+					max-width: 230px;
+				}
+				
+				>li.menu-item-has-children ul.submenu {
+					margin-top: 1rem;
+				}
+				
+			}
+			
+			a.playerfirst-login {
+				position: absolute;
+				right: 1rem;
+				transform: translateY(-2.7rem);
+			}
+			
+		}
+	}
+}
+
 header.site-header {
 	position: relative;
 	z-index: 5555;

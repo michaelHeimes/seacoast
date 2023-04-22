@@ -6,7 +6,7 @@
  */
 ?>
 
-<div class="top-bar-wrap grid-container fluid blue-bg">
+<div class="top-bar-wrap grid-container fluid">
 
 	<div class="top-bar" id="top-bar-menu">
 	
