@@ -35,12 +35,12 @@ $fields = get_fields();
 						echo '</div>';
 					}?>
 					
-					<div class="entry-content">
+					<div class="entry-content has-sidebar">
 						<div class="grid-container">
 							<div class="grid-x grid-padding-x align-center">
 								<div class="cell small-14 tablet-9 large-7">
 									<?php if( !empty($fields['copy_heading']) ):?>
-									<h2 class="underline"><?php echo $fields['copy_heading'];?></h2>	
+									<h2 class="h2-underlined underline-yellow"><?php echo $fields['copy_heading'];?></h2>	
 									<?php endif;?>
 									<?php if( !empty($fields['copy']) ):?>
 										<div class="copy-wrap">
@@ -68,7 +68,7 @@ $fields = get_fields();
 										</div>
 									<?php endif;?>
 								</div>
-								<div class="cell small-14 tablet-5 large-4 large-offset-1">
+								<div class="sidebar cell small-14 tablet-5 large-4 large-offset-1">
 									<?php if( !empty( $fields['contact_rows'] ) ):
 										$contact_rows = $fields['contact_rows'];
 									?>
@@ -109,13 +109,13 @@ $fields = get_fields();
 						</div>
 					</div>
 					
-					<section>
+					<section class="camps-table">
 						<div class="grid-container">
 							<div class="grid-x grid-padding-x align-center">
 								<div class="cell small-14">
-									<?php if( !empty( $fields['table_header']) ):?>
+									<?php if( !empty( $fields['table_heading']) ):?>
 										<h2 class="h3 text-center underline">
-											<?php echo $fields['table_header'];?>
+											<?php echo $fields['table_heading'];?>
 										</h2>
 									<?php endif;?>
 									<?php if ( !empty($fields['table_shortcode']) ) {

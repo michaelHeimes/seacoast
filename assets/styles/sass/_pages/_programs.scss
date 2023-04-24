@@ -1,0 +1,65 @@
+.page-template-page-programs {
+	main {
+		padding-bottom: 3.3rem;
+	}
+	.overview {
+		.copy-wrap {
+			padding-top: 2.8rem;
+		}
+		.region-nav {
+			padding: 2.75rem 3.75rem 1.1rem;
+			ul.regions {
+				padding-top: 0.28rem;
+			}
+			a {
+				width: 100%;
+				display: block;
+				margin: .65rem 0;
+			}
+		}
+	}
+	.camp-types {
+		padding-top: 5.7rem;
+		h2 {
+			margin-bottom: 2rem;
+			@include breakpoint(medium) {
+				margin-bottom: 3rem;
+			}
+		}
+		.accordion-content {
+			h6 {
+				color: $text-gray;
+			}
+			.button-links {
+				padding: 1.6rem 0 0;
+				.cell {
+					margin-bottom: 2rem;
+				}
+			}
+		}
+	}
+}
+
+.page-template-page-programs-sub-page {
+	main {
+		padding-bottom: 4.2rem;
+	}
+	.contact-card {
+		padding: 2.08rem 2.5rem;
+	}
+	.has-sidebar {
+		h2 {
+			margin-bottom: 2rem;
+			@include breakpoint(medium) {
+				margin-bottom: 3rem;
+			}
+		}
+	}
+	.camps-table {
+		h2 {
+			@include breakpoint(medium) {
+				margin-bottom: 1.35rem;
+			}
+		}
+	}
+}

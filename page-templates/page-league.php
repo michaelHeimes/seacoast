@@ -25,7 +25,7 @@ $fields = get_fields();
 						);
 					};?>
 	
-					<div class="entry-content">
+					<div class="entry-content has-sidebar">
 						<div class="grid-container">
 							<div class="grid-x grid-padding-x align-center">
 								<div class="cell small-14 tablet-9 large-7">
@@ -58,7 +58,7 @@ $fields = get_fields();
 										</div>
 									<?php endif;?>
 								</div>
-								<div class="cell small-14 tablet-5 large-4 large-offset-1">
+								<div class="sidebar cell small-14 tablet-5 large-4 large-offset-1">
 									<?php if( !empty( $fields['contact_rows'] ) ):
 										$contact_rows = $fields['contact_rows'];
 									?>

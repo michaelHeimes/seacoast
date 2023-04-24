@@ -35,14 +35,14 @@ $fields = get_fields();
 						echo '</div>';
 					}?>
 					
-					<section class="overview">
+					<section class="overview has-sidebar">
 						<div class="grid-container">
 							<div class="grid-x grid-padding-x align-center">
 								<div class="cell small-14 tablet-9 large-7">
 				
 									<section class="entry-content" itemprop="text">
 										<?php if( !empty($fields['overview_heading']) ):?>
-										<h2 class="underline"><?php echo $fields['overview_heading'];?></h2>	
+										<h2 class="h2-underlined underline-yellow"><?php echo $fields['overview_heading'];?></h2>	
 										<?php endif;?>
 										<?php if( !empty($fields['overview_copy']) ):?>
 											<div class="copy-wrap">
@@ -52,11 +52,11 @@ $fields = get_fields();
 									</section>
 								
 								</div>
-								<div class="cell small-14 tablet-5 large-4 large-offset-1 text-center">
+								<div class="sidebar cell small-14 tablet-5 large-4 large-offset-1 text-center">
 									<?php if( !empty($fields['region_links']) ):
 										$region_links = $fields['region_links'];
 									?>
-									<div class="card-shadow">
+									<div class="region-nav card-shadow">
 										<h3>Camps By Region</h3>
 										<ul class="regions text-center no-bullet">
 											<?php foreach($region_links as $region_link):
@@ -86,9 +86,9 @@ $fields = get_fields();
 						<div class="grid-container">
 							<div class="grid-x grid-padding-x align-center">
 								<div class="cell small-14 large-12">
-									<h3 class="text-center">
+									<h2 class="text-center">
 										<?php echo $fields['types_heading'];?>
-									</h3>
+									</h2>
 									<?php if( !empty( $fields['types_accordions'] ) ):
 										$types_accordions = $fields['types_accordions'];
 									?>
@@ -114,7 +114,7 @@ $fields = get_fields();
 														echo '</div>';
 													}?>
 													<?php if( !empty($copy) || !empty(button_links) ):?>
-													<div class="small-12 medium-8 large-8">
+													<div class="cell small-12 medium-8 large-8">
 														<?php if( !empty($copy) ):?>
 														<div class="copy-wrap">
 															<?php echo $copy;?>

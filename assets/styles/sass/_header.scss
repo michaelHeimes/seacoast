@@ -391,13 +391,18 @@ header.site-header {
 				padding: 1.094rem 2.22rem;
 				font-size: rem-calc(20);
 				font-weight: 400;
-				border-bottom: 1px solid rgba(255,255,255,.2);
 				
 			&:hover {
 	
 			}
 				
 			}
+			
+		&:not(:only-child):not(:last-child) {
+			a {
+				border-bottom: 1px solid rgba(255,255,255,.2);
+			}
+		}
 			
 		}
 	}

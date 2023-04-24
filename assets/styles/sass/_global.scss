@@ -155,6 +155,47 @@ thead {
 	}
 }
 
+.has-sidebar {
+	padding-top: 5.3125rem;
+	padding-bottom: 5rem;
+}
+
+body .dataTables_wrapper {
+	padding-top: 1.8rem;
+	overflow: auto;
+	
+	table { 
+		> thead > tr th {
+			padding-left: 1rem;
+			padding-right: 1rem;
+			&:last-child{
+				visibility: hidden;
+			}
+		}
+		> tbody tr {
+			&:first-child td {
+				padding-top: 1.55rem;
+			}
+			td,
+			th {
+				padding: 0.75rem 1rem 0.625rem;
+				min-width: 150px !important;
+				width: 21% !important;
+			}
+			td:last-child {
+				text-align: right;
+				min-width: 110px !important;
+				width: 110px !important;
+				a.button {
+					font-size: rem-calc(15);
+					padding: 0.719rem 1.405rem;
+				}
+			}
+		}
+	}
+	
+}
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
