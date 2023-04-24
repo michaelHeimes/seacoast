@@ -53,7 +53,7 @@
 @include foundation-dropdown-menu;
 
 // Layout components
-@include foundation-off-canvas;
+//@include foundation-off-canvas;
 @include foundation-reveal;
 @include foundation-sticky;
 //@include foundation-title-bar;
@@ -80,8 +80,11 @@
 @import "header";
 @import "footer";
 
-// @import "_parts/banner";
+@import "_parts/banner";
+@import "_parts/banner-text-links";
 
 // @import "_modules/page-modules";
 
 @import "_pages/home";
+@import "_pages/tournaments";
+@import "_pages/single-tournament";

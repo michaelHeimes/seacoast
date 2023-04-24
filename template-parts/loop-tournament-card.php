@@ -1,5 +1,5 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class('tournament-card cell'); ?>>
-	<div class="inner grid-x flex-dir-column h-100">
+<article id="post-<?php the_ID(); ?>" <?php post_class('tournament-card cell relative'); ?>>
+	<div class="inner grid-x flex-dir-column h-100 card-shadow">
 		<?php if( !empty( get_field('logo') ) ) {
 			$imgID = get_field('logo')['ID'];
 			$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );

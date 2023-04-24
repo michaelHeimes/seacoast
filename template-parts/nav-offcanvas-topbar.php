@@ -8,9 +8,9 @@
 
 <div class="top-bar-wrap grid-container fluid">
 
-	<div class="top-bar" id="top-bar-menu">
+	<div class="top-bar grid-x grid-padding-x" id="top-bar-menu">
 	
-		<div class="top-bar-left float-left">
+		<div class="cell auto">
 			
 			<div class="site-branding show-for-sr">
 				<?php
@@ -30,7 +30,7 @@
 				<?php endif; ?>
 			</div><!-- .site-branding -->
 		
-			<ul class="menu">
+			<ul class="menu logo-menu">
 				<li class="logo"><a href="<?php echo home_url(); ?>">
 					<?php 
 					$image = get_field('header_logo', 'option');
@@ -67,10 +67,10 @@
 				</div>
 			</div>
 		</div>
-		<div class="menu-toggle-wrap top-bar-right float-right hide-for-tablet">
+		<div class="menu-toggle-wrap cell shrink hide-for-tablet">
 			<ul class="menu">
 				<!-- <li><button class="menu-icon" type="button" data-toggle="off-canvas"></button></li> -->
-				<li><a id="menu-toggle" data-toggle="off-canvas"><span></span><span></span><span></span></a></li>
+				<li><a id="menu-toggle" class="menu-toggle" data-toggle="off-canvas"><span></span><span></span><span></span></a></li>
 			</ul>
 		</div>
 	</div>

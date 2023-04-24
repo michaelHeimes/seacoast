@@ -1,41 +1,103 @@
-footer#colophon {
+.partners {
+	padding-top: 2.7rem;
+	padding-bottom: 2.45rem;
 
+	.bg {
+		top: -170px;
+		height: 402px;
+		background-image: linear-gradient(180deg, rgba(0, 86, 151, 0) 0%, #20334a 27.1%, #20334a 100%);
+	}
+	
+	h2 {
+		margin-bottom: 2.3rem;
+	}
+	
+}
+
+footer#colophon {
+	padding-top: 4.85rem;
+	padding-bottom: 2.75rem;
+	text-align: center;
+	
+	@include breakpoint(medium) {
+		padding-top: 3rem;
+		padding-bottom: 0;
+		text-align: left;
+	}
+	
 	.site-info {
 
 	}
 	
 	.left {
 		.bottom {
-			@include breakpoint(medium down) {
+			@include breakpoint(small down) {
 				padding-bottom: 4.1rem;
 			}
 		}
 	}
 		
 	ul#footer-links {
-		@include breakpoint(medium down) {
-			padding-bottom: 4.08rem;
+		margin-left: -.4375rem;
+		margin-right: -.4375rem;
+		padding-bottom: 1.32rem;
+		@include breakpoint(small down) {
+			// padding-bottom: 4.08rem;
+			justify-content: center;
 		}
 		li {
+			padding: .4375rem;
 			a {
-				font-size: rem-calc(14);
-				line-height: rem-calc(19);
-				font-weight: bold;
-				text-transform: uppercase;
+				font-family: $heading-font;
+				color: $white;
+				font-size: rem-calc(16);
+				line-height: 1.5;
+				font-weight: 300;
 			}
 		}
 	}
 	
+	a.button {
+		@include breakpoint(small down) {
+			margin-top: 1.15rem;
+			margin-bottom: 2.625rem;
+		}
+	}
+	
+	.social-link-wrap {
+		@include breakpoint(small down) {
+			justify-content: center;	
+		}
+		@include breakpoint(medium) {
+			padding-bottom: 1.17rem;
+		}
+	}
+	
+	#social-links {
+		margin-left: -.375rem;
+		margin-right: -.375rem;
+		
+		@include breakpoint(medium) {
+			padding-bottom: 0.7rem;
+		}
+		
+		li {
+			margin: .375rem;
+		}
+	}
+	
+	.logo-wrap {
+		margin-bottom: 0.42rem;
+	}
+	
 	.copyright {
-		margin-bottom: 0;
-		@include breakpoint(medium down) {
-			text-align: center;
+		padding-top: 1.07rem;
+		padding-bottom: 2.2rem;
+		
+		@include breakpoint(medium) {
+			padding-top: 0.6rem;
 		}
-		@include breakpoint(tablet) {
-			br {
-				display: none;
-			}
-		}
+		
 	}
 	
 }

@@ -29,7 +29,7 @@
 				echo '</div>';
 			}?>
 			<div class="cell small-14 medium-9 tablet-8 large-7 large-offset-1">
-				<h1 class="white-color underlined"><?php echo $heading;?></h1>
+				<h1 class="h1-underlined underline-yellow white-color underlined"><?php echo $heading;?></h1>
 				
 				<?php if( is_singular( 'tournament' ) ):?>
 					<?php if( !empty( get_field('dates_for_single_post_banner') ) ):?>

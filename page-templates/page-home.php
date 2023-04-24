@@ -40,16 +40,19 @@ $fields = get_fields();
 							<div class="grid-x grid-padding-x align-center">
 								<?php if( !empty( $fields['news_events_heading'] ) ):?>
 								<div class="section-header cell small-14 large-12">
-									<h2 class="text-center white-color yellow-bold"><?php echo str_replace(['<p>', '</p>'], '',$fields['news_events_heading']);?></h2>
+									<h2 class="white-color yellow-bold"><?php echo str_replace(['<p>', '</p>'], '',$fields['news_events_heading']);?></h2>
 								</div>
 								<?php endif;?>
 							</div>
+						</div>
+						<div class="grid-container pr-0-mobile">
+							<div class="overflow-hidden">
 							<div class="grid-x grid-padding-x align-left">
 								<div class="cell small-12 large-offset-1">
 									<?php if( !empty( $fields['news_events'] ) ): 
 										$news_events =  $fields['news_events']; ?>
 										<div class="news-events-slider-wrap relative">
-											<div class="news-events-slider overflow-hidden">
+											<div class="news-events-slider">
 												<div class="swiper-wrapper">
 												<?php foreach($news_events as $news_event):
 													$page =  $news_event['page'];
@@ -57,52 +60,54 @@ $fields = get_fields();
 													$title =  $news_event['title'];	
 													$info =  $news_event['info'];	
 												?>
-													<div class="swiper-slide card-shadow grid-x flex-dir-column dark-blue-bg h-auto">
-														<?php if( !empty( $image ) ) {
-															$imgID = $image['ID'];
-															$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
-															$img = wp_get_attachment_image( $imgID, 'event-thumb', false, [ "class" => "", "alt"=>$img_alt] );
-															echo '<div class="img-wrap">';
-															echo $img;
-															echo '</div>';
-														}?>
-														<div class="bottom grid-x flex-dir-column flex-child-auto align-justify">
-															<div>
-																<?php if( !empty($title) ):?>
-																	<h3 class="white-color"><?php echo $title;?></h3>
-																<?php endif;?>
-																<?php if( !empty($info) ):?>
-																	<p><?php echo $info;?></p>
+													<div class="swiper-slide card-shadow grid-x flex-dir-column h-auto">
+														<a class="grid-x flex-dir-column h-100 white-color" href="<?php echo $page;?>">
+															<?php if( !empty( $image ) ) {
+																$imgID = $image['ID'];
+																$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
+																$img = wp_get_attachment_image( $imgID, 'event-thumb', false, [ "class" => "", "alt"=>$img_alt] );
+																echo '<div class="img-wrap">';
+																echo $img;
+																echo '</div>';
+															}?>
+															<div class="bottom grid-x flex-dir-column flex-child-auto align-justify">
+																<div>
+																	<?php if( !empty($title) ):?>
+																		<h3 class="white-color"><?php echo $title;?></h3>
+																	<?php endif;?>
+																	<?php if( !empty($info) ):?>
+																		<p><?php echo $info;?></p>
+																	<?php endif;?>
+																</div>
+																<?php if( !empty($page) ):?>
+																<div>
+																	<div class="button show-for-large">Learn More</div>
+																</div>
 																<?php endif;?>
 															</div>
-															<?php if( !empty($page) ):?>
-															<div>
-																<a class="button" href="<?php echo $page;?>">Learn More</a>
-															</div>
-															<?php endif;?>
-														</div>
+														</a>
 													</div>
 												<?php endforeach;?>
 												</div>
 											</div>
-											<div class="ne-swiper-button-prev">
+											<div class="swiper-btn swiper-btn-prev ne-swiper-button-prev show-for-large">
 												<?php get_template_part('template-parts/icon', 'slide-prev');?>
 											</div>
-											<div class="ne-swiper-button-next">
+											<div class="swiper-btn swiper-btn-next ne-swiper-button-next show-for-large">
 												<?php get_template_part('template-parts/icon', 'slide-next');?>
 											</div>
 										</div>
 									<?php endif;?>
 								</div>
 							</div>
+							</div>
 						</div>
 					</section>
 					
 					<section class="our-clubs has-bg">
 						<div class="bg heading-blue-bg"></div>
-						<div class="accent-wrap overflow-hidden">
-							<svg xmlns="http://www.w3.org/2000/svg" width="262.92" height="124.92" viewBox="-0.14 -0.04 262.91 124.96"><g transform="translate(-14.088 -1327.1)" data-name="Group 324"><g transform="translate(-396 862)" data-name="Group 307"><path transform="translate(-10280 2974.1) rotate(-45)" d="m9361.7 5889.5-60.949-19.2 12.951-12.952 35.958 12.15-12.576-35.532 12.621-12.621 19.955 60.191z" fill="#d7e352" data-name="Path 333"></path><g transform="translate(-10283 3002.1) rotate(-45)" fill="none" data-name="Path 333"><path d="m9361.7 5889.5-60.949-19.2 12.951-12.952 35.958 12.15-12.576-35.532 12.621-12.621 19.955 60.191z"></path><path d="m9361.4 5888.4 7.0947-7.0962-19.251-58.067-11.028 11.029 13.052 36.876-37.318-12.61-11.347 11.347 58.798 18.521m0.27832 1.1362-60.949-19.199 12.951-12.952 35.958 12.15-12.576-35.532 12.621-12.621 19.955 60.191-7.96 7.9614z" fill="#d7e352"></path></g><path transform="translate(-10325 2974.1) rotate(-45)" d="m9326 5879.5" fill="none" stroke="#d7e352" stroke-width="20" data-name="Path 336"></path></g><g transform="translate(-315 862)" data-name="Group 309"><path transform="translate(-10280 2974.1) rotate(-45)" d="m9361.7 5889.5-60.949-19.2 12.951-12.952 35.958 12.15-12.576-35.532 12.621-12.621 19.955 60.191z" fill="#d7e352" data-name="Path 333"></path><g transform="translate(-10283 3002.1) rotate(-45)" fill="none" data-name="Path 333"><path d="m9361.7 5889.5-60.949-19.2 12.951-12.952 35.958 12.15-12.576-35.532 12.621-12.621 19.955 60.191z"></path><path d="m9361.4 5888.4 7.0947-7.0962-19.251-58.067-11.028 11.029 13.052 36.876-37.318-12.61-11.347 11.347 58.798 18.521m0.27832 1.1362-60.949-19.199 12.951-12.952 35.958 12.15-12.576-35.532 12.621-12.621 19.955 60.191-7.96 7.9614z" fill="#d7e352"></path></g><path transform="translate(-10325 2974.1) rotate(-45)" d="m9326 5879.5" fill="none" stroke="#d7e352" stroke-width="20" data-name="Path 336"></path></g><g transform="translate(-233 862)" data-name="Group 310"><path transform="translate(-10280 2974.1) rotate(-45)" d="m9361.7 5889.5-60.949-19.2 12.951-12.952 35.958 12.15-12.576-35.532 12.621-12.621 19.955 60.191z" fill="#d7e352" data-name="Path 333"></path><g transform="translate(-10283 3002.1) rotate(-45)" fill="none" data-name="Path 333"><path d="m9361.7 5889.5-60.949-19.2 12.951-12.952 35.958 12.15-12.576-35.532 12.621-12.621 19.955 60.191z"></path><path d="m9361.4 5888.4 7.0947-7.0962-19.251-58.067-11.028 11.029 13.052 36.876-37.318-12.61-11.347 11.347 58.798 18.521m0.27832 1.1362-60.949-19.199 12.951-12.952 35.958 12.15-12.576-35.532 12.621-12.621 19.955 60.191-7.96 7.9614z" fill="#d7e352"></path></g><path transform="translate(-10325 2974.1) rotate(-45)" d="m9326 5879.5" fill="none" stroke="#d7e352" stroke-width="20" data-name="Path 336"></path></g></g></svg>
-
+						<div class="accent-wrap overflow-hidden relative">
+							<object data="<?php echo get_template_directory_uri(); ?>/assets/images/accent-chevs.svg" type="image/svg+xml"></object>
 						</div>
 						<div class="grid-container relative">
 							<div class="grid-x grid-padding-x">
@@ -144,13 +149,13 @@ $fields = get_fields();
 														?>
 															
 														<li>
-															<a class="text-gray-color" href="<?php echo $permalink;?>">
-																<div class="grid-x grid-padding-x">
+															<a class="text-gray-color heading-font" href="<?php echo $permalink;?>">
+																<div class="grid-x grid-padding-x align-middle">
 																	<div class="cell auto">
 																		<?php echo $name;?>
 																	</div>
 																	<div class="cell shrink">
-																		<svg xmlns="http://www.w3.org/2000/svg" width="28" viewBox="0 0 512 512"><!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --><path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z" fill="#D7E352"/></svg>
+																		<svg xmlns="http://www.w3.org/2000/svg" width="28" viewBox="0 0 512 512"><!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --><path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z" fill="#707070"/></svg>
 																	</div>
 																</div>
 															</a>
@@ -203,7 +208,7 @@ $fields = get_fields();
 						</div>
 					</section>
 					
-					<section class="about gradient-ld">
+					<section class="about gradient-ld overflow-hidden">
 						<div class="grid-container relative">
 							<div class="grid-x grid-padding-x align-center">
 								<div class="cell small-14 large-12 x-large-8">
@@ -217,7 +222,7 @@ $fields = get_fields();
 										);
 									};?>
 									<?php if( !empty($fields['about_top_copy_section']) ):?>
-										<div class="about-top-copy text-center white-color">
+										<div class="about-top-copy white-color">
 											<?php echo $fields['about_top_copy_section'];?>
 										</div>
 									<?php endif;?>
@@ -233,13 +238,14 @@ $fields = get_fields();
 													$unit = $about_facts_figure['unit'];
 													$text = $about_facts_figure['text'];
 												?>
-													<div class="swiper-slide ff-card text-center">
-														<div class="dark-blue-bg">
+													<div class="swiper-slide ff-card text-center grid-x flex-dir-column h-auto">
+														<div class="dark-blue-bg h-100">
 															<div class="inner">
-																<p class="yellow-color heading-font uppercase">
-																	<b><?php echo $figure;?></b>
+																<p class="heading-font uppercase">
+																	<b class="yellow-color"><?php echo $figure;?></b>
+																	<b class="hide-for-medium"><?php echo $unit;?></b>
 																</p>
-																<p class="unit heading-font uppercase">
+																<p class="heading-font uppercase show-for-medium">
 																	<b><?php echo $unit;?></b>
 																</p>
 																<p>
@@ -262,15 +268,17 @@ $fields = get_fields();
 												<div class="cell ff-card text-center">
 													<div class="dark-blue-bg">
 														<div class="inner">
-															<p class="yellow-color heading-font uppercase">
-																<b><?php echo $figure;?></b>
-															</p>
-															<p class="unit heading-font uppercase">
-																<b><?php echo $unit;?></b>
-															</p>
-															<p>
-																<?php echo $text;?>
-															</p>
+															<div class="text-wrap">
+																<p class="yellow-color heading-font uppercase">
+																	<b><?php echo $figure;?></b>
+																</p>
+																<p class="unit heading-font uppercase">
+																	<b><?php echo $unit;?></b>
+																</p>
+																<p>
+																	<?php echo $text;?>
+																</p>
+															</div>
 														</div>
 													</div>
 												</div>
@@ -278,7 +286,7 @@ $fields = get_fields();
 										</div>
 									<?php endif;?>
 									<?php if( !empty($fields['about_bottom_copy_section']) ):?>
-										<div class="about-top-copy text-center white-color">
+										<div class="about-bottom-copy white-color">
 											<?php echo $fields['about_bottom_copy_section'];?>
 										</div>
 									<?php endif;?>
@@ -287,7 +295,10 @@ $fields = get_fields();
 						</div>
 					</section>
 					
-					<section class="pathways">
+					<section class="pathways relative">
+						<div class="accent-wrap overflow-hidden relative show-for-medium">
+							<object data="<?php echo get_template_directory_uri(); ?>/assets/images/accent-chevs.svg" type="image/svg+xml"></object>
+						</div>
 						<div class="grid-container relative">
 							<div class="grid-x grid-padding-x align-center">
 								<div class="cell small-14 large-12">
@@ -316,6 +327,9 @@ $fields = get_fields();
 					<?php get_template_part('template-parts/content', 'instagram-feed');?>
 					
 					<section class="alumni has-object-fit">
+						<div class="accent-wrap overflow-hidden relative show-for-medium">
+							<object data="<?php echo get_template_directory_uri(); ?>/assets/images/accent-chevs.svg" type="image/svg+xml"></object>
+						</div>
 						<div class="banner-gradient-wrap relative">
 							<div class="bg bg-1"></div>
 							<?php if( !empty( $fields['alumni_background_image'] ) ) {
@@ -324,12 +338,12 @@ $fields = get_fields();
 								$img = wp_get_attachment_image( $imgID, 'full', false, [ "class" => "object-fit of-cover grayscale", "alt"=>$img_alt] );
 								echo $img;
 							}?>							
-							<div class="bg mask"></div>
+							<!-- <div class="bg mask"></div> -->
 							<div class="bg bg-2"></div>
 							
 							<div class="grid-container relative">
 								<div class="grid-x grid-padding-x align-center">
-									<div class="cell small-14 large-12 xxlarge-10">
+									<div class="cell small-14 large-10 xxlarge-8">
 										<?php if( !empty($fields['alumni_large_heading']) || !empty($fields['alumni_small_heading']) ) {
 											get_template_part('template-parts/part', 'big-small-header', 
 												array(
@@ -344,52 +358,54 @@ $fields = get_fields();
 											$alumni_player_cards = $fields['alumni_player_cards'];
 										?>
 	
-										<div class="alumni-slider">
-											<div class="swiper-wrapper">
-												<?php 
-												$i = 0; // Initialize a counter variable
-												foreach( $alumni_player_cards as $alumni_player_card ):
-													$logo = $alumni_player_card['logo'];
-													$player_name = $alumni_player_card['player_name'];
-													
-													$i++;
-													
-													if ($i % 3 == 1) {
-														echo '<div class="swiper-slide">';
-													}
-												?>
-													<div class="grid-x grid-padding-x">
-														<div class="cell small-12">
-															<div class="inner white-bg">
-																<div class="grid-x grid-margin-x">
-																	<?php if( !empty( $logo ) ) {
-																		$imgID = $logo['ID'];
-																		$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
-																		$img = wp_get_attachment_image( $imgID, 'full', false, [ "class" => "", "alt"=>$img_alt] );
-																		echo '<div class="logo-wrap cell small-14 medium-5">';
-																		echo $img;
-																		echo '</div>';
-																	}?>
-																	<?php if( !empty($player_name) ):?>
-																		<div class="cell small-14 medium-9">
-																			<h6><?php echo $player_name;?></h6>
-																		</div>
-																	<?php endif;?>
+										<div class="alumni-slider-wrap relative">
+											<div class="alumni-slider">
+												<div class="swiper-wrapper">
+													<?php 
+													$i = 0; // Initialize a counter variable
+													foreach( $alumni_player_cards as $alumni_player_card ):
+														$logo = $alumni_player_card['logo'];
+														$player_name = $alumni_player_card['player_name'];
+														
+														$i++;
+														
+														if ($i % 3 == 1) {
+															echo '<div class="swiper-slide">';
+														}
+													?>
+														<div class="grid-x grid-margin-x">
+															<div class="cell small-14">
+																<div class="inner white-bg">
+																	<div class="grid-x grid-margin-x">
+																		<?php if( !empty( $logo ) ) {
+																			$imgID = $logo['ID'];
+																			$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
+																			$img = wp_get_attachment_image( $imgID, 'full', false, [ "class" => "", "alt"=>$img_alt] );
+																			echo '<div class="logo-wrap text-center cell small-7 medium-5 grid-x align-middle align-center relative">';
+																			echo $img;
+																			echo '</div>';
+																		}?>
+																		<?php if( !empty($player_name) ):?>
+																			<div class="name-wrap cell small-7 medium-9 grid-x align-middle">
+																				<h6><?php echo $player_name;?></h6>
+																			</div>
+																		<?php endif;?>
+																	</div>
 																</div>
 															</div>
 														</div>
+													<?php
+														if ($i % 3 == 0) {
+															echo '</div>';
+														}
+													endforeach;?>
 													</div>
-												<?php
-													if ($i % 3 == 0) {
-														echo '</div>';
-													}
-												endforeach;?>
 												</div>
 											</div>
-											<div class="alumni-swiper-button-prev">
+											<div class="swiper-btn swiper-btn-prev alumni-swiper-button-prev">
 												<?php get_template_part('template-parts/icon', 'slide-prev');?>
 											</div>
-											<div class="alumni-swiper-button-next">
+											<div class="swiper-btn swiper-btn-next alumni-swiper-button-next">
 												<?php get_template_part('template-parts/icon', 'slide-next');?>
 											</div>
 										</div>
@@ -397,13 +413,20 @@ $fields = get_fields();
 									</div>
 								</div>
 							</div>
+							
 						</div>
 					</section>					
 					
 
 							
-					<footer class="article-footer">
-
+					<footer class="article-footer relative">
+						<div class="grid-container">
+							<div class="grid-x grid-padding-x align-center">
+								<div class="cell small-12 tablet-10">
+									<hr>
+								</div>
+							</div>
+						</div>
 					</footer> <!-- end article footer -->
 						
 				</article><!-- #post-<?php the_ID(); ?> -->

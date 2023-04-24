@@ -1,0 +1,9 @@
+.banner-text-links {
+	padding-top: 3.3125rem;
+	padding-bottom: 3.3125rem;
+	.img-wrap {
+		@include breakpoint(small down) {
+			margin-bottom: 2rem;
+		}
+	}
+}

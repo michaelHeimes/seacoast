@@ -39,8 +39,8 @@ $fields = get_fields();
 					<section class="tournaments">
 						<div class="grid-container">
 							<div class="grid-x grid-padding-x">
-								<div class="cell small-14">
-									<h2 class="h2-underlined white-color">Upcoming Tournaments</h2>
+								<div class="heading-wrap cell small-14">
+									<h2 class="h2-underlined underline-yellow white-color">Upcoming Tournaments</h2>
 								</div>
 							</div>
 							<div class="grid-x grid-padding-x small-up-1 medium-up-2 tablet-up-3 large-up-4">

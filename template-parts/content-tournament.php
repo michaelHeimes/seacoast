@@ -19,7 +19,7 @@ $fields = get_fields();
 			<div class="grid-x grid-padding-x align-center">
 				<div class="cell small-14 tablet-9 large-7">
 					<?php if( !empty( $fields['overview_copy'] ) ):?>
-						<h2 class="underlined">
+						<h2 class="h2-underlined underline-yellow">
 							Tournament Overview
 						</h2>
 						<div class="overview-copy-wrap heading-font">
@@ -93,45 +93,56 @@ $fields = get_fields();
 					<?php if( !empty( $fields['fee_types'] ) ):
 						$fee_types = $fields['fee_types'];
 					?>
-					<h3>Registration Fees</h3>
-					
-						<div class="fee-types card-shadow">
-							<?php foreach( $fee_types as $fee_type ):
-								$type_and_dates = $fee_type['type_and_dates'];
-								$table_rows = $fee_type['table_rows'];
-							?>
-							<div class="fee-type">
-								<?php if( !empty($type_and_dates) ):?>
-									<p class="heading-font heading-blue-color"><?php echo $type_and_dates;?></p>
-								<?php endif;?>
-								
-								<?php if( !empty($table_rows) ):?>
-								<table>
-									<thead>
-									<tr class="heading-font">
-										<th>Age Group</th>
-										<th>Format</th>
-										<th>Fee</th>
+					<div class="fee-types card-shadow">
+						<h3>Registration Fees</h3>
+						<?php foreach( $fee_types as $fee_type ):
+							$type_and_dates = $fee_type['type_and_dates'];
+							$table_rows = $fee_type['table_rows'];
+						?>
+						<div class="fee-type">
+							<?php if( !empty($type_and_dates) ):?>
+								<p class="heading-font heading-blue-color"><?php echo $type_and_dates;?></p>
+							<?php endif;?>
+							
+							<?php if( !empty($table_rows) ):?>
+							<table>
+								<thead>
+								<tr class="heading-font">
+									<th>Age Group</th>
+									<th>Format</th>
+									<th>Fee</th>
+								</tr>
+								</thead>
+								<tbody>
+									
+									<?php foreach( $table_rows as $table_row ):?>
+									<tr>									
+										<td><?php echo $table_row['age_group'];?></td>
+										<td><?php echo $table_row['format'];?></td>
+										<td><?php echo $table_row['fee'];?></td>
 									</tr>
-									</thead>
-									<tbody>
-										
-										<?php foreach( $table_rows as $table_row ):?>
-										<tr>									
-											<td><?php echo $table_row['age_group'];?></td>
-											<td><?php echo $table_row['format'];?></td>
-											<td><?php echo $table_row['fee'];?></td>
-										</tr>
-										<?php endforeach;?>
-										
-									</tbody>
-								</table>
-								<?php endif;?>
-								
-							</div>
-							<?php endforeach;?>
+									<?php endforeach;?>
+									
+								</tbody>
+							</table>
+							<?php endif;?>
+							
 						</div>
+						<?php endforeach;?>
 						
+						<?php 
+						$link = $fields['fees_button_link'];
+						if( $link ): 
+							$link_url = $link['url'];
+							$link_title = $link['title'];
+							$link_target = $link['target'] ? $link['target'] : '_self';
+							?>
+						<div class="btn-wrap">
+							<a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+						</div>
+						<?php endif; ?>
+						
+					</div>						
 					<?php endif?>
 				</div>
 			</div>
@@ -139,6 +150,5 @@ $fields = get_fields();
 	</div>
 
 	<footer class="entry-footer">
-		<?php seacoast_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

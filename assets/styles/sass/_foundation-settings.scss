@@ -78,8 +78,8 @@ $foundation-palette: (
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: $text-gray;
-$black: #0a0a0a;
-$white: #fefefe;
+$black: #000;
+$white: #fff;
 $body-background: $white;
 $body-font-color: $text-gray;
 $body-font-family: $body-font, sans-serif;
@@ -91,7 +91,7 @@ $global-position: 1rem;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
 $global-radius: 0;
-$global-menu-padding: 0.7rem 1rem;
+$global-menu-padding: 0;
 $global-menu-nested-margin: 1rem;
 $global-text-direction: ltr;
 $global-flexbox: true;
@@ -240,14 +240,14 @@ $accordion-background: $white;
 $accordion-plusminus: true;
 $accordion-plus-content: '\002B';
 $accordion-minus-content: '\2013';
-$accordion-title-font-size: inherit;
+$accordion-title-font-size: '';
 $accordion-item-color: $primary-color;
 $accordion-item-background-hover: $light-gray;
-$accordion-item-padding: 1.25rem 1rem;
+$accordion-item-padding: .75rem 0rem;
 $accordion-content-background: $white;
 $accordion-content-border: 0px solid $light-gray;
 $accordion-content-color: $body-font-color;
-$accordion-content-padding: 1rem;
+$accordion-content-padding: 0.48rem 0;
 
 // 8. Accordion Menu
 // -----------------
@@ -255,7 +255,7 @@ $accordion-content-padding: 1rem;
 $accordionmenu-padding: $global-menu-padding;
 $accordionmenu-nested-margin: $global-menu-nested-margin;
 $accordionmenu-submenu-padding: $accordionmenu-padding;
-$accordionmenu-arrows: true;
+$accordionmenu-arrows: false;
 $accordionmenu-arrow-color: $primary-color;
 $accordionmenu-item-background: null;
 $accordionmenu-border: null;

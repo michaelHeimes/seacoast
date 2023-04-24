@@ -124,18 +124,18 @@
         $('.display-on-load').css('visibility', 'visible');
     }
     
-    // Custom Functions
-    
-    _app.mobile_takover_nav = function() {
+    _app.mobile_nav = function() {
         $(document).on('click', 'a#menu-toggle', function(){
             
             if ( $(this).hasClass('clicked') ) {
                 $(this).removeClass('clicked');
+                $('body').removeClass('nav-open');
                 $('#off-canvas').fadeOut(200);
             
             } else {
             
                 $(this).addClass('clicked');
+                $('body').addClass('nav-open');
                 $('#off-canvas').fadeIn(200);
             
             }
@@ -143,21 +143,25 @@
         });
     }
     
+    // Custom Functions
+    
     _app.news_events_slider = function() {
         var neSwiper = new Swiper(".news-events-slider", {
             slidesPerView: 1,
-            spaceBetween: 42,
+            spaceBetween: 24,
             loop: true,
+            preventClicks: true,
             navigation: {
                 nextEl: ".ne-swiper-button-next",
                 prevEl: ".ne-swiper-button-prev",
             },
             breakpoints: {
-                560: {
+                640: {
                     slidesPerView: 2,
                 },
                 1024: {
                     slidesPerView: 3,
+                    spaceBetween: 42,
                 },
             },
         });
@@ -242,6 +246,7 @@
         _app.emptyParentLinks();
         _app.fixed_nav_hack();
         _app.display_on_load();
+        _app.mobile_nav();
         
         // Custom Functions
         _app.news_events_slider();

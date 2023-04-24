@@ -9,7 +9,7 @@
 			$img = wp_get_attachment_image( $imgID, 'full', false, [ "class" => "object-fit of-cover grayscale", "alt"=>$img_alt] );
 			echo $img;
 		}?>							
-		<div class="bg mask"></div>
+		<!-- <div class="bg mask"></div> -->
 		<div class="bg bg-2"></div>
 		<?php if( !empty( $page_banner['large_heading']) || !empty( $page_banner['small_heading']) ) {
 			get_template_part('template-parts/part', 'big-small-header', 

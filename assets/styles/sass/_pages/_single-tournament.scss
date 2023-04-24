@@ -1,0 +1,27 @@
+.single-tournament {
+	.entry-content {
+		padding-top: 5.3125rem;
+		padding-bottom: 5rem;
+		@include breakpoint(tablet) {
+			padding-bottom: 2rem;
+		}
+		
+		.fee-types {
+			padding: 2.75rem 1.8rem;
+			
+			@include breakpoint(medium down) {
+				margin-top: 2rem;
+			}
+			
+			p.heading-font.heading-blue-color {
+				margin-bottom: 0.2rem;
+			}
+			
+			.btn-wrap {
+				padding-top: 0.8rem;
+			}
+			
+		}
+		
+	}
+}

@@ -1,0 +1,35 @@
+.page-template-page-tournaments {
+	.image-copy {
+		padding-top: 3.1875rem;
+		padding-bottom: 14.75rem;
+		.img-wrap {
+			margin-bottom: 3rem;
+		}
+		.copy-wrap {
+			padding-bottom: 2rem;
+		}
+	}
+	.tournaments {
+		margin-top: -15.25rem;
+		padding-bottom: 1.4rem;
+		
+		.heading-wrap {
+			padding-bottom: 1.2rem;
+			@include breakpoint(tablet) {
+				padding-bottom: 1.8rem;
+				text-align: center;
+			}
+		}
+		
+		.tournament-card {
+			margin-bottom: 2rem;
+			.bottom {
+				padding: 1.68rem 1.4rem 2.58rem;
+				h3 {
+					margin-bottom: 0.15rem;
+				}
+			}
+		}
+		
+	}
+}
