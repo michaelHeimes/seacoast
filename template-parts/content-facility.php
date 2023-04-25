@@ -17,12 +17,12 @@ $fields = get_fields();
 	<div class="entry-content">
 		<div class="grid-container">
 			<div class="grid-x grid-padding-x align-center">
-				<div class="cell small-14 large-12">
+				<div class="overview cell small-14 large-12">
 					<?php if( !empty( $fields['overview'] ) ):?>
-						<h2 class="underlined">
+						<h2 class="h2-underlined underline-yellow">
 							Facility Overview
 						</h2>
-						<div class="overview-copy-wrap heading-font">
+						<div class="overview-copy-wrap">
 							<?php echo $fields['overview'];?>
 						</div>
 					<?php endif;?>
@@ -31,7 +31,7 @@ $fields = get_fields();
 					$rental_rates_rows = $fields['rental_rates_rows'];
 				?>
 				<div class="rates-wrap cell small-14 tablet-7 large-6">
-					<h2 class="underline">
+					<h2 class="h2-underlined underline-yellow">
 						Rental Rates
 					</h2>
 					<?php if( !empty($rental_rates_rows) ):?>
@@ -74,7 +74,7 @@ $fields = get_fields();
 					$photos = $fields['photos'];	
 				?>
 				<div class="facility-slider-wrap cell small-14 tablet-7 large-6">
-					<h2 class="underline">
+					<h2 class="h2-underlined underline-yellow">
 						Facility Photos
 					</h2>
 					<div class="facility-slider overflow-hidden">

@@ -1,19 +1,5 @@
 .page-template-page-home {
 	header.site-header {
-		transition: all .3s ease;
-		&:not(.is-stuck) {
-			background: transparent;
-			@include breakpoint(tablet) {
-				background-image: linear-gradient(0deg, rgba($blue-color, 0.937) 0%, $heading-blue 100%);	
-			}
-		}
-		&.is-stuck {
-			background-color: $blue-color;
-			@include breakpoint(tablet) {
-				background-image: linear-gradient(0deg, rgba($blue-color, 0.937) 0%, $heading-blue 100%);	
-			}
-		}
-
 		.top-bar {
 			@include breakpoint(tablet down) {
 				height: 86px;
