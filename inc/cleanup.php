@@ -103,3 +103,10 @@ function seacoast_get_the_author_posts_link() {
 	);
 	return $link;
 }
+
+// Remove unused post type 'post' from admin
+add_action('admin_menu', 'remove_options');
+ 
+function remove_options() {
+	remove_menu_page( 'edit.php' );
+}

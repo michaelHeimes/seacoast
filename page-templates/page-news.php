@@ -31,7 +31,7 @@ $fields = get_fields();
 								<?php		
 								$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;	
 								$args = array(  
-									'post_type' => 'post',
+									'post_type' => 'news_post',
 									'post_status' => 'publish',
 									'posts_per_page' => 8,
 									'paged' => $paged
