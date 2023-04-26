@@ -1,9 +1,9 @@
 {
-    "key": "group_64382c527d23c",
-    "title": "Tournaments Page",
+    "key": "group_64487e39491a6",
+    "title": "News Page",
     "fields": [
         {
-            "key": "field_64382ca90c422",
+            "key": "field_64487e394c8a8",
             "label": "Page Banner",
             "name": "page_banner_clone",
             "aria-label": "",
@@ -23,28 +23,6 @@
             "layout": "block",
             "prefix_label": 0,
             "prefix_name": 0
-        },
-        {
-            "key": "field_64382ec3c5332",
-            "label": "Image & Copy",
-            "name": "image_copy_clone",
-            "aria-label": "",
-            "type": "clone",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "clone": [
-                "field_64382e9502e9b"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
         }
     ],
     "location": [
@@ -52,7 +30,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "page-templates\/page-tournaments.php"
+                "value": "page-templates\/page-news.php"
             }
         ]
     ],
@@ -67,5 +45,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1682472886
+    "modified": 1682472877
 }

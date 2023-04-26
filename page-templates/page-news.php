@@ -1,6 +1,6 @@
 <?php
 /**
- * Template name: Tournaments Page
+ * Template name: News Page
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -25,27 +25,13 @@ $fields = get_fields();
 							)
 						);
 					};?>
-				
-					<?php if( !empty($fields['image_and_copy']) ) {
-						echo '<div class="relative"><div class="bg gradient-dl"></div>';
-						get_template_part('template-parts/content', 'image-and-copy', 
-							array(
-								'image_and_copy' => $fields['image_and_copy'],
-							)
-						);	
-						echo '</div>';
-					}?>
 					
-					<section class="tournaments">
+					<section class="news">
 						<div class="grid-container">
-							<div class="grid-x grid-padding-x">
-								<div class="heading-wrap cell small-14">
-									<h2 class="h2-underlined underline-yellow white-color">Upcoming Tournaments</h2>
-								</div>
-							</div>
-								<?php			
+								<?php		
+								$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;	
 								$args = array(  
-									'post_type' => 'tournament',
+									'post_type' => 'post',
 									'post_status' => 'publish',
 									'posts_per_page' => -1,
 								);
@@ -53,24 +39,23 @@ $fields = get_fields();
 								$loop = new WP_Query( $args ); 
 								
 								if ( $loop->have_posts() ) : ?>
-									
 							<div class="grid-x grid-padding-x small-up-1 medium-up-2 tablet-up-3 large-up-4">
-
 								<?php	
 								while ( $loop->have_posts() ) : $loop->the_post();
 								
-									get_template_part('template-parts/loop', 'tournament-card');	
+									get_template_part('template-parts/loop', 'news-card');	
 								
 								endwhile;?>
-									
 							</div>
 								<?php	
 								else:?>
 							<div class="grid-x grid-padding-x">
-								
-									<h2 class="cell small-14 text-center">There are no Tournaments at this time.<br>Check back soon.</h2>
+									<h2 class="cell small-14 text-center">There are no News at this time.<br>Check back soon.</h2>
 							</div>
 								<?php endif;
+								echo paginate_links( array(
+									'total' => $loop->max_num_pages
+								) );
 								wp_reset_postdata(); 
 								?>
 						</div>
