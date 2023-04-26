@@ -65,10 +65,18 @@ function seacoast_gallery_style($css) {
 }
 
 // This removes the annoying […] to a Read More link
+function theme_slug_excerpt_length( $length ) {
+		if ( is_admin() ) {
+				return $length;
+		}
+		return 30;
+}
+add_filter( 'excerpt_length', 'theme_slug_excerpt_length', 999 );
+
 function seacoast_excerpt_more($more) {
 	global $post;
 	// edit here if you like
-return '<a class="excerpt-read-more" href="'. get_permalink($post->ID) . '" title="'. __('Read', 'trailhead') . get_the_title($post->ID).'">'. __('... Read more &raquo;', 'trailhead') .'</a>';
+return '<span class="excerpt-read-more">'. __('...', 'trailhead') .'</span>';
 }
 
 //  Stop WordPress from using the sticky class (which conflicts with Foundation), and style WordPress sticky posts using the .wp-sticky class instead

@@ -33,7 +33,8 @@ $fields = get_fields();
 								$args = array(  
 									'post_type' => 'post',
 									'post_status' => 'publish',
-									'posts_per_page' => -1,
+									'posts_per_page' => 8,
+									'paged' => $paged
 								);
 								
 								$loop = new WP_Query( $args ); 
@@ -47,15 +48,29 @@ $fields = get_fields();
 								
 								endwhile;?>
 							</div>
+							<div class="grid-x grid-padding-x">
+								<?php
+								$pagination = paginate_links( array(
+									'base' => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
+									'format' => '?paged=%#%',
+									'current' => max( 1, get_query_var( 'paged' ) ),
+									'total' => $loop->max_num_pages,
+									'prev_text' => __( '<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36"><g id="Group_362" data-name="Group 362" transform="translate(-52 -845)"><circle id="Ellipse_12" data-name="Ellipse 12" cx="18" cy="18" r="18" transform="translate(52 845)" fill="#d7e352"/><path id="Icon_awesome-chevron-left" data-name="Icon awesome-chevron-left" d="M2.223,10.948l8.011-8.011a.989.989,0,0,1,1.4,0l.934.934a.989.989,0,0,1,0,1.4L6.22,11.648l6.349,6.379a.989.989,0,0,1,0,1.4l-.934.934a.989.989,0,0,1-1.4,0L2.223,12.347A.989.989,0,0,1,2.223,10.948Z" transform="translate(61.067 851.352)" fill="#1a293c"/></g></svg>', 'textdomain' ),
+									'next_text' => __( '<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36"><g id="Group_362" data-name="Group 362" transform="translate(88 881) rotate(180)"><circle id="Ellipse_12" data-name="Ellipse 12" cx="18" cy="18" r="18" transform="translate(52 845)" fill="#d7e352"/><path id="Icon_awesome-chevron-left" data-name="Icon awesome-chevron-left" d="M2.223,10.948l8.011-8.011a.989.989,0,0,1,1.4,0l.934.934a.989.989,0,0,1,0,1.4L6.22,11.648l6.349,6.379a.989.989,0,0,1,0,1.4l-.934.934a.989.989,0,0,1-1.4,0L2.223,12.347A.989.989,0,0,1,2.223,10.948Z" transform="translate(61.067 851.352)" fill="#1a293c"/></g></svg>', 'textdomain' )
+								) );
+								
+								if ( $pagination ) :
+									echo '<div class="pagination cell small-14 grid-x align-middle align-center">' . $pagination . '</div>';
+								endif;
+									
+							?>
+							</div>
 								<?php	
 								else:?>
 							<div class="grid-x grid-padding-x">
 									<h2 class="cell small-14 text-center">There are no News at this time.<br>Check back soon.</h2>
 							</div>
 								<?php endif;
-								echo paginate_links( array(
-									'total' => $loop->max_num_pages
-								) );
 								wp_reset_postdata(); 
 								?>
 						</div>

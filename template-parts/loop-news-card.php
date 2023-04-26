@@ -12,13 +12,19 @@
 			<div>
 				<h2 class="h3"><?php the_title();?></h2>
 				<?php
-				$post_date = get_the_date( 'F j, Y' ); echo $post_date;
+				$post_date = get_the_date( 'F j, Y' ); 
+				echo '<div class="post-date"><b>' . $post_date . "</b></div>";
 				?>
-			</div>
 				
+				<div class="entry-content">
+					<?php the_excerpt();?>
+				</div>
+				
+			</div>
+	
 			<div class="link-wrap">
 				<a class="button" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
-					More Information
+					Read More
 				</a>
 			</div>
 				

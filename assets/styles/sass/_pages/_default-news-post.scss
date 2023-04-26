@@ -1,0 +1,10 @@
+.page-template-default,
+.single-post {
+	.entry-content {
+		padding-top: 3.45rem;
+		padding-bottom: 2.7rem;
+		@include breakpoint(medium) {
+			padding-top: 7.45rem;
+		}
+	}
+}

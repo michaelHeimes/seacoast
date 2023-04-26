@@ -1,12 +1,13 @@
 <?php $page_banner = $args['page_banner'];?>
 <header class="entry-header banner text-center has-object-fit">
-	<div class="banner-gradient-wrap relative">
+	<div class="banner-gradient-wrap relative display-on-load" style="visibility: hidden">
 		<div class="bg bg-1"></div>
 		<?php if( !empty( $page_banner ) ) {
+			$style = 'visibility: hidden';
 			$pbImg = $page_banner['background_image'];
 			$imgID = $pbImg['ID'];
 			$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
-			$img = wp_get_attachment_image( $imgID, 'full', false, [ "class" => "object-fit of-cover grayscale", "alt"=>$img_alt] );
+			$img = wp_get_attachment_image( $imgID, 'full', false, [ "class" => "object-fit of-cover grayscale", "alt"=>$img_alt]);
 			echo $img;
 		}?>							
 		<!-- <div class="bg mask"></div> -->

@@ -1,0 +1,30 @@
+.page-template-page-news {
+	.post-date {
+		padding-bottom: 1rem;
+	}
+	.entry-content {
+		padding-bottom: 1.5rem;
+	}
+	.pagination {
+		span,
+		a {
+			font-family: $header-font-family;
+			padding: .2rem;
+			margin: .2rem;
+			display: inline-flex;
+			color: $text-gray;
+			align-items: center;
+			justify-content: center;
+			transition: color .25s ease;
+		}
+		a:hover {
+			color: $primary-color;
+		}
+		span {
+			text-decoration: underline;
+		}
+		svg {
+			max-width: 28px;
+		}
+	}
+}
