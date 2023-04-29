@@ -238,6 +238,32 @@
             },
         });
     }
+    
+    _app.fake_ajax_load_more = function() {
+        const list = document.querySelector(".grid");
+        if(list) {
+            const listItems = list.querySelectorAll(".grid-card");
+            const ajaxLoadMoreBtn = document.querySelector(".ajax-load-more");
+            
+            let k = 4;
+            let j = 6;
+            
+            ajaxLoadMoreBtn.addEventListener("click", function (event) {
+                event.preventDefault();
+              let range = `.grid-card:nth-child(n+${k}):nth-child(-n+${j})`;
+              list
+                .querySelectorAll(range)
+                .forEach((elem) => (elem.style.display = "block"));
+            
+              if (listItems.length <= j) {
+                this.remove();
+              } else {
+                k += 3;
+                j += 3;
+              }
+            });
+        }
+    } 
             
     _app.init = function() {
         
@@ -254,6 +280,7 @@
         _app.alumni_slider();
         _app.table_register_link();
         _app.facility_gallery_slider();
+        _app.fake_ajax_load_more();
     }
     
     

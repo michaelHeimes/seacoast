@@ -4,7 +4,7 @@
 <section class="instagram-feed">
 	<div class="grid-container">
 		<div class="grid-x grid-padding-x align-middle">
-			<div class="left cell small-14 tablet-7">
+			<div class="left cell small-14 tablet-7 blue-bold">
 				<?php if( !empty(get_field('social_large_heading', 'option')) || !empty(get_field('social_small_heading', 'option')) ) {
 					get_template_part('template-parts/part', 'big-small-header', 
 						array(

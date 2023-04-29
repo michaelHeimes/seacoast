@@ -23,7 +23,7 @@ $fields = get_fields();
 	<section class="seacoast-difference">
         <div class="grid-container">
             <div class="grid-x grid-padding-x align-middle">
-                <div class="cell small-14 tablet-7">
+                <div class="left cell small-14 tablet-7">
 		            <?php if( !empty( get_field('seacoast_difference_image', 'option') ) ) {
                         $imgID = get_field('seacoast_difference_image', 'option')['ID'];
                         $img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
@@ -33,11 +33,13 @@ $fields = get_fields();
                         echo '</div>';
                     }?>
                 </div>
-                <div class="cell small-14 tablet-7 large-6">
+                <div class="right cell small-14 tablet-7 large-6">
                     <?php if( !empty( get_field('seacoast_difference_heading', 'option') ) ):?>
-                        <h2 class="underline">
+                    <div class="underlined-h2-wrap">
+                        <h2 class="underline h2-underlined underline-yellow">
                             <?php the_field('seacoast_difference_heading', 'option') ;?>
                         </h2>
+                    </div>
                     <?php endif;?>
                     <?php if( !empty( get_field('seacoast_difference_copy', 'option') ) ):?>
                         <div class="copy-wrap">
@@ -99,9 +101,9 @@ $fields = get_fields();
                                         <?php echo $name;?>
                                     </h3>
                                     <?php endif;?>
-                                    <?php if( !empty($title) ):?>
+                                    <?php if( !empty($position) ):?>
                                     <p class="white-color">
-                                        <?php echo $title;?>
+                                        <?php echo $position;?>
                                     </p>
                                     <?php endif;?>
                                 </div>
@@ -122,12 +124,14 @@ $fields = get_fields();
     <?php if( !empty( $fields['programs_heading'] ) || !empty( $fields['programs_copy'] ) || !empty( $fields['programs_links_heading'] ) || !empty( $fields['programs_button_links'] ) || !empty( $fields['programs_cta'] ) ):?>
     <section class="programs heading-blue-bg">
         <div class="grid-container">
-            <div class="grid-x grid-padding-x align-center">
-                <div class="cell small-14 tablet-7 large-6">
+            <div class="grid-x grid-padding-x align-center align-middle">
+                <div class="left cell small-14 tablet-7 large-7">
                     <?php if( !empty( $fields['programs_heading']) ):?>
-                    <h2 class="underline white-color">
-                        <?php echo $fields['programs_heading'];?>
-                    </h2>
+                    <div class="underlined-h2-wrap">
+                        <h2 class="underline h2-underlined underline-yellow white-color">
+                            <?php echo $fields['programs_heading'];?>
+                        </h2>
+                    </div>
                     <?php endif;?>
                     <?php if( !empty( $fields['programs_copy']) ):?>
                     <div class="copy-wrap">
@@ -142,7 +146,7 @@ $fields = get_fields();
                     <?php if( !empty( $fields['programs_button_links'] ) ):
                         $programs_button_links = $fields['programs_button_links'];    
                     ?>
-                    <div class="grid-x grid-padding-x">
+                    <div class="buttons-wrap grid-x grid-padding-x">
                         <?php foreach($programs_button_links as $programs_button_link):?>
                             <?php 
                             $link = $programs_button_link['button_link'];
@@ -159,7 +163,7 @@ $fields = get_fields();
                     </div>
                     <?php endif;?>
                 </div>
-                <div class="cell small-14 tablet-7 large-6">
+                <div class="right cell small-14 tablet-7 large-5">
                     <?php if( !empty($fields['programs_cta']) ):
                         $image = $fields['programs_cta']['image'];
                         $title = $fields['programs_cta']['title'];
@@ -176,7 +180,7 @@ $fields = get_fields();
                             echo $img;
                             echo '</div>';
                         }?>
-                        <div>
+                        <div class="text-wrap">
                             <?php if( !empty($title) ):?>
                             <h3 class="blue-color">
                                 <?php echo $title;?>
@@ -203,22 +207,24 @@ $fields = get_fields();
     <section class="locations">
         <div class="grid-container">
             <div class="grid-x grid-padding-x align-center">
-                <div class="cell small-14 tablet-6 large-6">
+                <div class="left cell small-14 tablet-6 large-6">
                     <?php if( !empty( $fields['locations_map_embed_code'] ) ):
                         echo $fields['locations_map_embed_code'];
                     endif;?>
                 </div>
                 <?php if( !empty( $fields['locations_heading'] ) || !empty( $fields['locations'] ) ):?>
-                <div class="cell small-14 tablet-6 large-6">
+                <div class="right cell small-14 tablet-6 large-5 large-offset-1">
                     <?php if( !empty( $fields['locations_heading'] ) ):?>
-                    <h2 class="underline">
-                        <?php echo $fields['locations_heading'];?>
-                    </h2>
+                    <div class="underlined-h2-wrap">
+                        <h2 class="underline h2-underlined underline-yellow">
+                            <?php echo $fields['locations_heading'];?>
+                        </h2>
+                    </div>
                     <?php endif;?>
                     <?php if( !empty( $fields['locations'] ) ):
                         $locations = $fields['locations']
                     ?>
-                    <div class="locations">
+                    <div class="location-rows">
                         <?php foreach( $locations as $location ):
                             $name = $location['name'];    
                             $address = $location['address'];    

@@ -29,8 +29,9 @@
 				echo '</div>';
 			}?>
 			<div class="cell small-14 medium-9 tablet-8 large-7 large-offset-1">
-				<h1 class="h1-underlined underline-yellow white-color underlined"><?php echo $heading;?></h1>
-				
+				<div class="underlined-h1-wrap">
+					<h1 class="h1-underlined underline-yellow has-dark-blue-bg white-color underlined"><?php echo $heading;?></h1>
+				</div>
 				<?php if( is_singular( 'tournament' ) ):?>
 					<?php if( !empty( get_field('dates_for_single_post_banner') ) ):?>
 						<h2 class="yellow-color">
@@ -58,7 +59,7 @@
 						$link_title = $link['title'];
 						$link_target = $link['target'] ? $link['target'] : '_self';
 						?>
-					<div>
+					<div class="btn-wrap">
 						<a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 					</div>
 					<?php endif; ?>

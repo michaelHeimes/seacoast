@@ -5,6 +5,10 @@
 		margin: auto;
 		object {
 			transform: translateX(-2.25rem);
+			max-height: 12.164vw;
+			@include breakpoint(tablet) {
+				max-height: none;
+			}
 		}
 	}
 	
@@ -178,7 +182,10 @@
 			}
 		}
 		.section-header {
-			margin-bottom: 4.25rem;
+			margin-bottom: 2.6rem;
+			@include breakpoint(medium) {
+				margin-bottom: 4.25rem;
+			}
 			
 			h3.h2.small-heading {
 				font-size: rem-calc(24);
@@ -227,9 +234,10 @@
 	}
 	
 	.about {
-		padding-top: 4.4375rem;
+		padding-top: 3.7rem;
 		padding-bottom: 2.75rem;
 		@include breakpoint(medium) {
+			padding-top: 4.4375rem;
 			padding-bottom: 4.7rem;
 		}
 		.section-header {
@@ -237,7 +245,8 @@
 		}
 		.about-top-copy,
 		.about-bottom-copy {
-			@include breakpoint(tablet) {
+			text-align: left;
+			@include breakpoint(medium) {
 				text-align: center;
 			}
 		}

@@ -25,7 +25,7 @@ $fields = get_fields();
 							<div class="grid-x grid-padding-x">
 								<div class="cell small-14">
 									<?php if( !empty( $fields['table_header']) ):?>
-									<div class="header-wrap">
+									<div class="header-wrap underlined-h2-wrap">
 										<h2 class="h2-underlined underline-yellow">
 											<?php echo $fields['table_header'];?>
 										</h2>

@@ -40,7 +40,7 @@ $fields = get_fields();
 						<div class="grid-container">
 							<div class="grid-x grid-padding-x">
 								<div class="heading-wrap cell small-14">
-									<h2 class="h2-underlined underline-yellow white-color">Upcoming Tournaments</h2>
+									<h2 class="h2-underlined underline-yellow white-color relative">Upcoming Tournaments</h2>
 								</div>
 							</div>
 								<?php			
@@ -54,7 +54,7 @@ $fields = get_fields();
 								
 								if ( $loop->have_posts() ) : ?>
 									
-							<div class="grid-x grid-padding-x small-up-1 medium-up-2 tablet-up-3 large-up-4">
+							<div class="grid grid-x grid-padding-x small-up-1 medium-up-2 tablet-up-3 large-up-4">
 
 								<?php	
 								while ( $loop->have_posts() ) : $loop->the_post();
@@ -77,7 +77,19 @@ $fields = get_fields();
 					</section>
 
 							
-					<footer class="article-footer">
+					<footer class="article-footer hide-for-medium">
+						<div class="grid-container">
+							<div class="grid-x grid-padding-x">
+								<div class="text-center cell small-14">
+									<a class="button ajax-load-more" href="#">Show More</a>
+								</div>
+								<div class="text-center cell small-14">
+									<a class="button light-blue" href="#top" data-smooth-scroll>
+										Top Of Page
+									</a>
+								</div>
+							</div>
+						</div>
 					</footer> <!-- end article footer -->
 						
 				</article><!-- #post-<?php the_ID(); ?> -->

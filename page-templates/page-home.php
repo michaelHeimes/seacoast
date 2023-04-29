@@ -61,7 +61,7 @@ $fields = get_fields();
 													$info =  $news_event['info'];	
 												?>
 													<div class="swiper-slide card-shadow grid-x flex-dir-column h-auto">
-														<a class="grid-x flex-dir-column h-100 white-color" href="<?php echo $page;?>">
+														<div class="grid-x flex-dir-column h-100 white-color">
 															<?php if( !empty( $image ) ) {
 																$imgID = $image['ID'];
 																$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
@@ -81,11 +81,11 @@ $fields = get_fields();
 																</div>
 																<?php if( !empty($page) ):?>
 																<div>
-																	<div class="button show-for-large">Learn More</div>
+																	<a class="button" href="<?php echo $page;?>">Learn More</a>
 																</div>
 																<?php endif;?>
 															</div>
-														</a>
+														</div>
 													</div>
 												<?php endforeach;?>
 												</div>
@@ -175,7 +175,7 @@ $fields = get_fields();
 										$our_clubs_logos = $fields['our_clubs_logos'];
 									?>
 									<div class="grid-x grid-padding-x align-center">
-										<div class="cell small-12 tablet-10">
+										<div class="cell small-12 medium-10">
 											<div class="club-logos grid-x grid-padding-x grid-12 small-up-2 tablet-up-3 large-up-4 align-middle">
 												<?php foreach( $our_clubs_logos as $logo ):?>
 													<?php if( !empty( $logo ) ) {
@@ -301,7 +301,7 @@ $fields = get_fields();
 						</div>
 						<div class="grid-container relative">
 							<div class="grid-x grid-padding-x align-center">
-								<div class="cell small-14 large-12">
+								<div class="cell small-14 large-12 blue-bold">
 									<?php if( !empty($fields['pathways_large_heading']) || !empty($fields['pathways_small_heading']) ) {
 										get_template_part('template-parts/part', 'big-small-header', 
 											array(

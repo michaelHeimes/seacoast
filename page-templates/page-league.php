@@ -30,7 +30,9 @@ $fields = get_fields();
 							<div class="grid-x grid-padding-x align-center">
 								<div class="cell small-14 tablet-9 large-7">
 									<?php if( !empty($fields['copy_heading']) ):?>
-									<h2 class="underline"><?php echo $fields['copy_heading'];?></h2>	
+									<div class="underlined-h2-wrap">
+										<h2 class="underline h2-underlined"><?php echo $fields['copy_heading'];?></h2>	
+									</div>
 									<?php endif;?>
 									<?php if( !empty($fields['copy']) ):?>
 										<div class="copy-wrap">

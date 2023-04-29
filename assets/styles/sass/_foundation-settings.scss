@@ -149,9 +149,9 @@ $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
 $header-styles: (
   "small": (
-    'h1': ('font-size': 33),
-    'h2': ('font-size': 20),
-    'h3': ('font-size': 18),
+    'h1': ('font-size': 30),
+    'h2': ('font-size': 30),
+    'h3': ('font-size': 20),
     'h4': ('font-size': 17),
     'h5': ('font-size': 16),
     'h6': ('font-size': 15),
@@ -242,7 +242,7 @@ $accordion-plus-content: '\002B';
 $accordion-minus-content: '\2013';
 $accordion-title-font-size: '';
 $accordion-item-color: $primary-color;
-$accordion-item-background-hover: $light-gray;
+$accordion-item-background-hover: $white;
 $accordion-item-padding: .75rem 0rem;
 $accordion-content-background: $white;
 $accordion-content-border: 0px solid $light-gray;

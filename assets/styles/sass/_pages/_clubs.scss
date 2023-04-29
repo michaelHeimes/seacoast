@@ -1,0 +1,70 @@
+.single-club {
+	
+	.seacoast-difference {
+		padding-top: 3.6rem;
+		.left,
+		.right {
+			margin-bottom: 3.6rem;
+		}
+		.underlined-h2-wrap {
+			padding-bottom: 1.88rem;
+		}
+	}
+	.staff {
+		padding-top: 6.375rem;
+		padding-bottom: 3.25rem;
+		.section-header {
+			margin-bottom: 2.7rem;
+		}
+	}
+	.staff-grid {
+		padding-top: 1rem;
+		> .cell {
+			margin-bottom: 1.25rem;
+			.img-wrap {
+				margin-bottom: 0.75rem;
+			}
+			h3 {
+				margin-bottom: 0.1rem;
+			}
+		}
+	}
+	.programs,
+	.locations {
+		padding-top: 5rem;
+		padding-bottom: 2rem;
+		.left,
+		.right {
+			margin-bottom: 3rem;
+		}
+		.copy-wrap {
+			padding-bottom: 1.8rem;
+		}
+		.buttons-wrap {
+			padding-top: 1.07rem;
+		}
+		.text-wrap {
+			padding: 1.8rem 1.75rem;
+		}
+	}
+	.programs {
+		.underlined-h2-wrap {
+			padding-bottom: 1.4rem;
+		}
+	}
+	.locations {
+		.underlined-h2-wrap {
+			padding-bottom: 2rem;
+		}
+		.location-rows a {
+			display: block;
+			svg {
+				transform: translateY(6px);
+			}
+			&:not(:last-child):not(only-child) {
+				margin-bottom: 1rem;
+				display: block;
+			}
+		}
+	}
+}

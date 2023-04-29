@@ -1,14 +1,25 @@
 .single-tournament {
 	
-	.sidebar {
-		@include breakpoint(medium down) {
-			margin-top: 2rem;
+	.entry-content.has-sidebar {
+		padding-bottom: 3.3rem;
+		.underlined-h2-wrap {
+			margin-bottom: 0.8rem;
+		}
+		.overview-copy-wrap {
+			padding-bottom: 0.8rem;
+			@include breakpoint(medium) {
+				padding-bottom: 2.75rem;
+			}
 		}
 	}
-		
+			
 	.fee-types {
 		padding: 2.75rem 1.8rem;
-					
+		
+		@include breakpoint(medium down) {
+			margin-bottom: 2.08rem;
+		}
+	
 		p.heading-font.heading-blue-color {
 			margin-bottom: 0.2rem;
 		}

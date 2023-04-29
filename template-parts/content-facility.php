@@ -19,9 +19,11 @@ $fields = get_fields();
 			<div class="grid-x grid-padding-x align-center">
 				<div class="overview cell small-14 large-12">
 					<?php if( !empty( $fields['overview'] ) ):?>
-						<h2 class="h2-underlined underline-yellow">
-							Facility Overview
-						</h2>
+						<div class="underlined-h2-wrap">
+							<h2 class="h2-underlined underline-yellow has-white-bg">
+								Facility Overview
+							</h2>
+						</div>
 						<div class="overview-copy-wrap">
 							<?php echo $fields['overview'];?>
 						</div>
@@ -31,9 +33,11 @@ $fields = get_fields();
 					$rental_rates_rows = $fields['rental_rates_rows'];
 				?>
 				<div class="rates-wrap cell small-14 tablet-7 large-6">
-					<h2 class="h2-underlined underline-yellow">
-						Rental Rates
-					</h2>
+					<div class="underlined-h2-wrap">
+						<h2 class="h2-underlined underline-yellow">
+							Rental Rates
+						</h2>
+					</div>
 					<?php if( !empty($rental_rates_rows) ):?>
 						<div class="rate-rows">
 							<?php foreach( $rental_rates_rows as $rental_rates_row ):
@@ -74,10 +78,12 @@ $fields = get_fields();
 					$photos = $fields['photos'];	
 				?>
 				<div class="facility-slider-wrap cell small-14 tablet-7 large-6">
-					<h2 class="h2-underlined underline-yellow">
-						Facility Photos
-					</h2>
-					<div class="facility-slider overflow-hidden">
+					<div class="underlined-h2-wrap">
+						<h2 class="h2-underlined underline-yellow">
+							Facility Photos
+						</h2>
+					</div>
+					<div class="facility-slider overflow-hidden relative">
 						<div class="swiper-wrapper">
 							<?php foreach($photos as $image):?>
 								<div class="swiper-slide">
@@ -92,11 +98,11 @@ $fields = get_fields();
 								</div>
 							<?php endforeach;?>
 						</div>
-						<div class="facility-swiper-button-prev">
+						<div class="facility-swiper-button-prev grid-x align-center-middle">
 							<svg xmlns="http://www.w3.org/2000/svg" width="13.313" height="21.936" viewBox="0 0 13.313 21.936">
 							  <path id="Icon_awesome-chevron-left" data-name="Icon awesome-chevron-left" d="M2.286,12.764,12.049,3a1.206,1.206,0,0,1,1.7,0L14.893,4.14a1.206,1.206,0,0,1,0,1.7L7.157,13.616l7.737,7.774a1.205,1.205,0,0,1,0,1.7l-1.139,1.139a1.206,1.206,0,0,1-1.7,0L2.286,14.469A1.206,1.206,0,0,1,2.286,12.764Z" transform="translate(-1.933 -2.648)" fill="#fff"/></svg>
 						</div>
-						<div class="facility-swiper-button-next">
+						<div class="facility-swiper-button-next grid-x align-center-middle">
 							<svg xmlns="http://www.w3.org/2000/svg" width="13.313" height="21.936" viewBox="0 0 13.313 21.936">
 							  <path id="Icon_awesome-chevron-left" data-name="Icon awesome-chevron-left" d="M.353,10.115,10.116.353a1.206,1.206,0,0,1,1.7,0L12.96,1.492a1.206,1.206,0,0,1,0,1.7L5.224,10.968l7.737,7.774a1.205,1.205,0,0,1,0,1.7L11.82,21.583a1.206,1.206,0,0,1-1.7,0L.353,11.82A1.206,1.206,0,0,1,.353,10.115Z" transform="translate(13.313 21.936) rotate(180)" fill="#fff"/></svg>
 						</div>
@@ -108,6 +114,5 @@ $fields = get_fields();
 	</div>
 
 	<footer class="entry-footer">
-		<?php seacoast_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

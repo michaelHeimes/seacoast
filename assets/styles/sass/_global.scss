@@ -3,9 +3,6 @@
 Stylesheet: Global Stylesheet
 
 *************************************************/
-/*********************
-BACKGROUND COLORS
-*********************/
 
 /*********************
 RE-USED ELEMENTS
@@ -56,22 +53,16 @@ a.button {
 	.large-heading {
 		margin: 0;
 		font-size: rem-calc(82);
+		font-size: 16vw;
 		line-height: .152;
-		line-height: 0.74;
+		line-height: 0.9;
 		padding: 0em 0 0.092em;
 		letter-spacing: -.04em;
 		opacity: .2;
-		
-		@media screen and (min-width: 540) {
-			font-size: rem-calc(102);
-		}
-		
-		@include breakpoint(medium) {
-			font-size: rem-calc(134);
-		}
-		
-		@include breakpoint(tablet) {
+				
+		@include breakpoint(xlarge) {
 			font-size: rem-calc(184);
+			line-height: 0.74;
 		}	
 	}
 	.small-heading {
@@ -129,10 +120,14 @@ thead {
 
 .accordion {
 	li.accordion-item {
-		margin-bottom: 1.7rem;
+		margin-bottom: 1.38rem;
+		@include breakpoint(medium) {
+			margin-bottom: 1.7rem;
+		}
 		&.is-active {
 			a {
 				color: $blue-color;
+				transition: color .25s ease;
 				&:before {
 					padding-bottom: 2.75px;
 				}

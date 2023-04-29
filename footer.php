@@ -21,7 +21,9 @@
 							<div class="cell small-14 large-12">
 								
 								<?php if( !empty( get_field('partners_heading', 'option') ) ):?>
-								<h2 class="h2-underlined underline-yellow white-color"><?php the_field('partners_heading', 'option');?></h2>
+								<div class="underlined-h2-wrap">
+									<h2 class="h2-underlined underline-yellow has-dark-blue-bg white-color text-shadow"><?php the_field('partners_heading', 'option');?></h2>
+								</div>
 								<?php endif;?>
 								
 								<?php if( !empty( get_field('partners', 'option') ) ):

@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class('tournament-card cell relative'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('tournament-card grid-card cell relative'); ?>>
 	<div class="inner grid-x flex-dir-column h-100 card-shadow">
 		<?php if( !empty( get_field('logo') ) ) {
 			$imgID = get_field('logo')['ID'];

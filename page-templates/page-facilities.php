@@ -42,7 +42,7 @@ $fields = get_fields();
 					<div class="facilities">
 						<div class="grid-container">
 							<div class="grid-x grid-padding-x">
-								<div class="cell small-14">
+								<div class="cell small-14 underlined-h2-wrap">
 									<h2 class="h2-underlined underline-yellow">Facilities</h2>
 								</div>
 							</div>

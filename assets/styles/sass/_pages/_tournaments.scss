@@ -2,7 +2,11 @@
 .page-template-page-news {
 	.image-copy {
 		padding-top: 3.1875rem;
-		padding-bottom: 14.75rem;
+		padding-bottom: 9.75rem;
+		@include breakpoint(medium) {
+			padding-bottom: 14.75rem;
+		}
+		
 		.img-wrap {
 			margin-bottom: 3rem;
 		}
@@ -12,10 +16,16 @@
 	}
 	.tournaments,
 	.news {
-		padding-bottom: 1.4rem;
+		padding-bottom: .95rem;
+		@include breakpoint(medium) {
+			padding-bottom: 1.4rem;
+		}
 		
 		.heading-wrap {
-			padding-bottom: 1.2rem;
+			padding-bottom: 1.45rem;
+			@include breakpoint(small down) {
+				text-align: center;
+			}				
 			@include breakpoint(tablet) {
 				padding-bottom: 1.8rem;
 				text-align: center;
@@ -25,6 +35,17 @@
 		.tournament-card,
 		.news-card {
 			margin-bottom: 2rem;
+			@include breakpoint(small down) {
+				max-width: 280px;
+				margin-left: auto;
+				margin-right: auto;
+				
+			&:nth-child(3) ~ .tournament-card,
+			&:nth-child(3) ~ .news-card {
+				display: none;
+			}
+				
+			}
 			.bottom {
 				padding: 1.68rem 1.4rem 2.58rem;
 				h3 {
@@ -32,13 +53,25 @@
 				}
 			}
 		}
-		
+				
 	}
 	
 	.tournaments {
-		margin-top: -15.25rem;
+		margin-top: -10.25rem;
+		@include breakpoint(medium) {
+			margin-top: -15.25rem;
+		}
 	}
 	.news {
 		padding-top: 3rem;
 	}
+	
+	.article-footer {
+		padding-bottom: 3.5rem;
+		a {
+			display: inline-block;
+			margin-bottom: 1.5rem;
+		}
+	}
+	
 }
