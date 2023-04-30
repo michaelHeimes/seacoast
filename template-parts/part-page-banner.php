@@ -7,7 +7,7 @@
 			$pbImg = $page_banner['background_image'];
 			$imgID = $pbImg['ID'];
 			$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
-			$img = wp_get_attachment_image( $imgID, 'full', false, [ "class" => "object-fit of-cover grayscale", "alt"=>$img_alt]);
+			$img = wp_get_attachment_image( $imgID, 'banner-bg', false, [ "class" => "object-fit of-cover grayscale", "alt"=>$img_alt]);
 			echo $img;
 		}?>							
 		<!-- <div class="bg mask"></div> -->

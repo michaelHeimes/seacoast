@@ -8,7 +8,7 @@
             "name": "logo",
             "aria-label": "",
             "type": "image",
-            "instructions": "",
+            "instructions": "Minimum 564px X 442px",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -25,7 +25,7 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "",
-            "preview_size": "medium"
+            "preview_size": "thumbnail"
         },
         {
             "key": "field_6438802af7c52",
@@ -624,5 +624,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681674712
+    "modified": 1682797805
 }

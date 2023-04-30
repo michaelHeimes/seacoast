@@ -1,25 +1,48 @@
 .single-club {
 	
 	.seacoast-difference {
-		padding-top: 3.6rem;
+		padding-top: 2.32rem;
+		padding-bottom: 2.32rem;
+		@include breakpoint(medium) {
+			padding-top: 3.6rem;
+			padding-bottom: 0;
+		}
 		.left,
 		.right {
-			margin-bottom: 3.6rem;
+			margin-bottom: 2.2rem;
+			@include breakpoint(medium) {
+				margin-bottom: 3.6rem;
+			}
 		}
 		.underlined-h2-wrap {
-			padding-bottom: 1.88rem;
+			padding-bottom: 1.4rem;
+			@include breakpoint(medium) {
+				padding-bottom: 1.88rem;
+			}
 		}
 	}
 	.staff {
-		padding-top: 6.375rem;
-		padding-bottom: 3.25rem;
+		padding-top: 4.2rem;
+		padding-bottom: 2.25rem;
+		@include breakpoint(medium) {
+			padding-top: 6.375rem;
+			padding-bottom: 3.25rem;
+		}
 		.section-header {
-			margin-bottom: 2.7rem;
+			margin-bottom: 0.85rem;
+			@include breakpoint(medium) {
+				margin-bottom: 2.7rem;
+			}
+		}
+		.staff-text {
+			@include breakpoint(medium) {
+				text-align: center;	
+			}
 		}
 	}
 	.staff-grid {
 		padding-top: 1rem;
-		> .cell {
+		.single-staff {
 			margin-bottom: 1.25rem;
 			.img-wrap {
 				margin-bottom: 0.75rem;
@@ -31,14 +54,19 @@
 	}
 	.programs,
 	.locations {
-		padding-top: 5rem;
+		padding-top: 2.38rem;
 		padding-bottom: 2rem;
+		@include breakpoint(medium) {
+			padding-top: 5rem;
+		}
 		.left,
 		.right {
 			margin-bottom: 3rem;
 		}
 		.copy-wrap {
-			padding-bottom: 1.8rem;
+			@include breakpoint(medium) {
+				padding-bottom: 1.8rem;
+			}
 		}
 		.buttons-wrap {
 			padding-top: 1.07rem;
@@ -66,5 +94,12 @@
 				display: block;
 			}
 		}
+	}
+	.right {
+		a {
+			@include breakpoint(tablet down) {
+				max-width: 363px;
+			}
+		}	
 	}
 }

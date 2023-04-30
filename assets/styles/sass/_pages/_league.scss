@@ -1,7 +1,10 @@
 .page-template-page-league {
 	.entry-content {
 		.underlined-h2-wrap {
-			padding-bottom: 2.83rem;
+			padding-bottom: 0.98rem;
+			@include breakpoint(medium) {
+				padding-bottom: 2.83rem;
+			}
 		}
 	}
 	.button-links {
@@ -9,6 +12,9 @@
 	}
 	.contact-card {
 		padding: 2.15rem 2.5rem .25rem;
+		@include breakpoint(medium down) {
+			margin-top: 2.5rem;
+		}
 		.card-row {
 			padding-bottom: 1.35rem;
 		}

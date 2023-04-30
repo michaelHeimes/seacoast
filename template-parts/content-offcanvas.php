@@ -7,6 +7,7 @@
 ?>
 
 <div class="off-canvas gradient-ld" id="off-canvas" style="display: none;" data-off-canvas>
+	<div id="off-canvas-top"></div>
 	
 	<div class="top-bar grid-x grid-padding-x" id="top-bar-menu">
 	
@@ -30,7 +31,7 @@
 				<?php endif; ?>
 			</div><!-- .site-branding -->
 		
-			<ul class="menu">
+			<ul class="menu logo-menu">
 				<li class="logo"><a href="<?php echo home_url(); ?>">
 					<?php 
 					$image = get_field('header_logo', 'option');

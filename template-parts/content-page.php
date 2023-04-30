@@ -28,5 +28,18 @@
             </div>
         </div>
 	</div><!-- .entry-content -->
+    
+    <footer class="article-footer hide-for-medium">
+        <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+                <div class="text-center cell small-14">
+                    <a class="button light-blue" href="#top" data-smooth-scroll>
+                        Top Of Page
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer> <!-- end article footer -->
+    
 
 </article><!-- #post-<?php the_ID(); ?> -->

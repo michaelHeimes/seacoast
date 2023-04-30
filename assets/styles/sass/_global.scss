@@ -41,6 +41,18 @@ a.button {
 	
 }
 
+.swiper-btn {
+	cursor: pointer;
+	svg circle {
+		transition: .25s ease;
+	}
+	&:hover {
+		svg circle {
+			fill: scale-color($button-background, $lightness: -25%);
+		}
+	}
+}
+
 .tablepress {
 	visibility: hidden;
 	th {
@@ -151,8 +163,11 @@ thead {
 }
 
 .has-sidebar {
-	padding-top: 5.3125rem;
+	padding-top: 2.08rem;
 	padding-bottom: 5rem;
+	@include breakpoint(medium) {
+		padding-top: 5.3125rem;
+	}
 }
 
 body .dataTables_wrapper {

@@ -66,7 +66,7 @@
 // ---------
 
 $global-font-size: 100%;
-$global-width: rem-calc(1288);
+$global-width: rem-calc(1256);
 $global-lineheight: 1.5;
 $foundation-palette: (
   "primary": #D7E352,
@@ -112,7 +112,7 @@ $breakpoints: (
   "tablet": 900px,
   "large": 1024px,
   "xlarge": 1150px,
-  "xxlarge": 1288px,
+  "xxlarge": 1256px,
 );
 $breakpoints-hidpi: (
   "hidpi-1": 1,
@@ -300,7 +300,7 @@ $button-padding: 0.8125em 2.305em;
 $button-margin: 0;
 $button-fill: solid;
 $button-background: $primary-color;
-$button-background-hover: scale-color($button-background, $lightness: -15%);
+$button-background-hover: scale-color($button-background, $lightness: -25%);
 $button-color: $heading-blue;
 $button-color-alt: $black;
 $button-radius: $global-radius;

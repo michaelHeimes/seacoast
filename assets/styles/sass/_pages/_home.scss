@@ -70,6 +70,7 @@
 		h1 {
 			span.underline.u-yellow {
 				font-size: rem-calc(54);
+				font-size: 14.4vw;
 				line-height: 1.07;
 				letter-spacing: .04em;
 				position: relative;
@@ -88,6 +89,18 @@
 				}
 				
 				@include breakpoint(medium) {
+					&:before {
+						height: 1.5rem;
+					}
+					font-size: 20vw;
+					
+					&:after {
+						height: 1.5rem;
+					}
+					
+				}
+				
+				@include breakpoint(tablet) {
 					&:before {
 						height: 1.5rem;
 					}

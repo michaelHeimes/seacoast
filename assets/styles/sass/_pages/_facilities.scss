@@ -23,14 +23,23 @@
 	}
 	
 	.entry-content {
-		padding-top: 5.1rem;
+		padding-top: 2.5rem;
 		padding-bottom: 3.5rem;
+		@include breakpoint(medium) {
+			padding-top: 5.1rem;
+		}
 	}
 	
 	.overview {
-		padding-bottom: 5rem;
+		padding-bottom: 2rem;
+		@include breakpoint(medium) {
+			padding-bottom: 5rem;
+		}
 		.underlined-h2-wrap {
-			margin-bottom: 2.48rem;
+			margin-bottom: 0.82rem;
+			@include breakpoint(medium) {
+				margin-bottom: 2.48rem;
+			}
 		}
 	}
 	
@@ -39,7 +48,9 @@
 			padding-bottom: 1.82rem;
 		}
 		.rate-row {
-			padding-bottom: 2.9rem;
+			@include breakpoint(medium) {
+				padding-bottom: 2.9rem;
+			}
 		}
 		a {
 			color: $text-gray;
@@ -48,7 +59,10 @@
 	
 	.facility-slider-wrap {
 		.underlined-h2-wrap {
-			padding-bottom: 1.75rem;
+			padding-bottom: 1.1rem;
+			@include breakpoint(medium) {
+				padding-bottom: 1.75rem;
+			}
 		}
 		.facility-swiper-button-prev,
 		.facility-swiper-button-next {
@@ -67,6 +81,10 @@
 			right: 0;
 		}
 		
+	}
+	
+	.article-footer {
+		padding-bottom: 5rem;
 	}
 	
 }

@@ -23,8 +23,20 @@
 		span {
 			text-decoration: underline;
 		}
-		svg {
-			max-width: 28px;
+		a.page-numbers {
+			svg {
+				max-width: 28px;
+				circle {
+					transition: .25s ease;
+				}
+			}
+			
+		&:hover {
+			svg circle {
+				fill: scale-color($button-background, $lightness: -25%);
+			}
+		}
+			
 		}
 	}
 }

@@ -47,11 +47,11 @@
 					<div class="grid-x align-right align-middle xlarge-flex-dir-row-reverse">
 						<?php if( get_field('playerfirst_login', 'option') ):?>
 						<div class="cell small-14 xlarge-shrink text-right">
-							<a class="playerfirst-login" href="<?php the_field('playerfirst_login');?>" target="_blank">
+							<a class="playerfirst-login align-middle" href="<?php the_field('playerfirst_login');?>" target="_blank">
 								<?php if( !empty( get_field('playerfirst_logo', 'option') ) ) {
 									$imgID = get_field('playerfirst_logo', 'option')['ID'];
 									$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
-									$img = wp_get_attachment_image( $imgID, 'full', false, [ "class" => "", "alt"=>$img_alt] );
+									$img = wp_get_attachment_image( $imgID, 'full', false, [ "class" => "style-svg", "alt"=>$img_alt] );
 									echo '<span class="logo-wrap">';
 									echo $img;
 									echo '</span>';

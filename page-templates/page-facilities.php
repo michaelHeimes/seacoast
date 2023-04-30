@@ -53,10 +53,10 @@ $fields = get_fields();
 							
 							<article id="post-<?php the_ID(); ?>" <?php post_class('cell'); ?>>
 								<a class="inner grid-x flex-dir-column white-bg card-shadow align-center text-center" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
-									<?php if( !empty( get_field('archive_card_image') ) ) {
-										$imgID = get_field('archive_card_image')['ID'];
+									<?php if( !empty( get_field('banner_image') ) ) {
+										$imgID = get_field('banner_image')['ID'];
 										$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
-										$img = wp_get_attachment_image( $imgID, 'full', false, [ "class" => "", "alt"=>$img_alt] );
+										$img = wp_get_attachment_image( $imgID, 'facility-thumb', false, [ "class" => "", "alt"=>$img_alt] );
 										echo '<div class="img-wrap">';
 										echo $img;
 										echo '</div>';

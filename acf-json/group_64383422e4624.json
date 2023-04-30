@@ -22,11 +22,11 @@
         },
         {
             "key": "field_64383423b9241",
-            "label": "Logo",
-            "name": "logo",
+            "label": "Image",
+            "name": "banner_image",
             "aria-label": "",
             "type": "image",
-            "instructions": "",
+            "instructions": "Minimum width of 834px. This is also used for the archive cards and will be cropped to 774px X 436px.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -43,7 +43,7 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "",
-            "preview_size": "medium"
+            "preview_size": "thumbnail"
         },
         {
             "key": "field_6438344eb9242",
@@ -272,7 +272,7 @@
         },
         {
             "key": "field_6438350ec8a8a",
-            "label": "Photos",
+            "label": "Photo Slider",
             "name": "",
             "aria-label": "",
             "type": "accordion",
@@ -290,11 +290,11 @@
         },
         {
             "key": "field_643835223a81d",
-            "label": "Photos",
+            "label": "Photo Slides",
             "name": "photos",
             "aria-label": "",
             "type": "gallery",
-            "instructions": "Minimum width 1104px",
+            "instructions": "Minimum width 1012px",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -314,7 +314,7 @@
             "max_size": "",
             "mime_types": "",
             "insert": "append",
-            "preview_size": "medium"
+            "preview_size": "thumbnail"
         },
         {
             "key": "field_643d35aa455a4",
@@ -335,31 +335,6 @@
             "endpoint": 0
         },
         {
-            "key": "field_643d353e61fa7",
-            "label": "Archive Card Image",
-            "name": "archive_card_image",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "778px X 438px",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "preview_size": "medium"
-        },
-        {
             "key": "field_643d355561fa8",
             "label": "Archive Card Location",
             "name": "archive_card_location",
@@ -369,7 +344,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
@@ -400,5 +375,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681733057
+    "modified": 1682800493
 }

@@ -4,7 +4,7 @@
 		$heading = get_field('title');
 		
 	} elseif ( is_singular( 'facility' ) ) {
-		$image = get_field('logo');
+		$image = get_field('banner_image');
 		$heading = get_the_title();
 		$address = get_field('address');
 		$rental_link = get_field('rental_link');
@@ -15,20 +15,26 @@
 		$button_links = $page_banner['button_links'];
 		$copy = $page_banner['copy'];
 	}
+
+	if( is_page_template('page-templates/page-league-sub-page.php') || is_page_template('page-templates/page-facilities.php') ) {
+		$col_reverse = true;
+	} else {
+		$col_reverse = false;
+	}
 	
 ?>
 <header class="entry-header banner banner-text-links heading-blue-bg">
 	<div class="grid-container">
-		<div class="grid-x grid-padding-x align-center align-middle">
+		<div class="grid-x grid-padding-x align-center align-middle<?php if( $col_reverse == true ) { echo ' flex-dir-column-reverse medium-flex-dir-row';};?>">
 			<?php if( !empty( $image ) ) {
 				$imgID = $image['ID'];
 				$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
 				$img = wp_get_attachment_image( $imgID, 'banner-img', false, [ "class" => "", "alt"=>$img_alt] );
-				echo '<div class="img-wrap cell small-14 medium-5 tablet-6 large-4">';
+				echo '<div class="img-wrap cell small-14 medium-6 large-5">';
 				echo $img;
 				echo '</div>';
 			}?>
-			<div class="cell small-14 medium-9 tablet-8 large-7 large-offset-1">
+			<div class="text-wrap cell small-14 medium-8 large-7">
 				<div class="underlined-h1-wrap">
 					<h1 class="h1-underlined underline-yellow has-dark-blue-bg white-color underlined"><?php echo $heading;?></h1>
 				</div>

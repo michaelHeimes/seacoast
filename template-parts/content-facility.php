@@ -90,7 +90,7 @@ $fields = get_fields();
 									<?php if( !empty( $image ) ) {
 										$imgID = $image['ID'];
 										$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
-										$img = wp_get_attachment_image( $imgID, 'full', false, [ "class" => "", "alt"=>$img_alt] );
+										$img = wp_get_attachment_image( $imgID, 'large', false, [ "class" => "", "alt"=>$img_alt] );
 										echo '<div class="img-wrap">';
 										echo $img;
 										echo '</div>';

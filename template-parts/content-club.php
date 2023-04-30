@@ -22,7 +22,7 @@ $fields = get_fields();
     <?php if( !empty( get_field('seacoast_difference_image', 'option') ) || !empty( get_field('seacoast_difference_heading', 'option') ) || !empty( get_field('seacoast_difference_copy', 'option') ) ):?>
 	<section class="seacoast-difference">
         <div class="grid-container">
-            <div class="grid-x grid-padding-x align-middle">
+            <div class="grid-x grid-padding-x align-middle flex-dir-column-reverse tablet-flex-dir-row">
                 <div class="left cell small-14 tablet-7">
 		            <?php if( !empty( get_field('seacoast_difference_image', 'option') ) ) {
                         $imgID = get_field('seacoast_difference_image', 'option')['ID'];
@@ -69,20 +69,69 @@ $fields = get_fields();
                     };?>
                     
                     <?php if( !empty( $fields['staff_text']) ):?>
-                    <p class="text-center white-color"><?php echo $fields['staff_text'];?></p>
+                    <p class="staff-text white-color"><?php echo $fields['staff_text'];?></p>
                     <?php endif;?>
                     
                     <?php if( !empty( $fields['staff_members'] ) ):
                         $staff_members = $fields['staff_members'];    
                     ?>
-                    <div class="staff-grid grid-x grid-padding-x small-up-2 medium-up-3 tablet-up-4 large-up-5">
+                    <div class="staff-grid staff-slider-wrap hide-for-tablet">
+                        <div class="grid-container">
+                            <div class="grid-x grid-padding-x">
+                                <div class="cell small-13">
+                                    <div class="staff-slider">
+                                        <div class="swiper-wrapper">
+                                            <?php foreach( $staff_members as $staff_member ):
+                                                $photo = $staff_member['photo'];
+                                                $name = $staff_member['name'];
+                                                $position = $staff_member['position'];
+                                                $email_address = $staff_member['email_address'];
+                                            ?>
+                                            <div class="swiper-slide single-staff">
+                                                <?php if( !empty($email_address) ):?>
+                                                <a href="mailto:<?php echo $email_address;?>">
+                                                <?php endif;?>
+                                                
+                                                    <?php if( !empty( $photo ) ) {
+                                                        $imgID = $photo['ID'];
+                                                        $img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
+                                                        $img = wp_get_attachment_image( $imgID, 'staff-card', false, [ "class" => "", "alt"=>$img_alt] );
+                                                        echo '<div class="img-wrap">';
+                                                        echo $img;
+                                                        echo '</div>';
+                                                    }?>
+                                                    <div>
+                                                        <?php if( !empty($name) ):?>
+                                                        <h3 class="yellow-color">
+                                                            <?php echo $name;?>
+                                                        </h3>
+                                                        <?php endif;?>
+                                                        <?php if( !empty($position) ):?>
+                                                        <p class="white-color">
+                                                            <?php echo $position;?>
+                                                        </p>
+                                                        <?php endif;?>
+                                                    </div>
+                                                
+                                                <?php if( !empty($email_address) ):?>
+                                                </a> 
+                                                <?php endif;?>
+                                            </div>
+                                            <?php endforeach;?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="staff-grid grid-x grid-padding-x small-up-2 medium-up-3 tablet-up-4 large-up-5 show-for-tablet">
                         <?php foreach( $staff_members as $staff_member ):
                             $photo = $staff_member['photo'];
                             $name = $staff_member['name'];
                             $position = $staff_member['position'];
                             $email_address = $staff_member['email_address'];
                         ?>
-                        <div class="cell">
+                        <div class="cell single-staff">
                             <?php if( !empty($email_address) ):?>
                             <a href="mailto:<?php echo $email_address;?>">
                             <?php endif;?>
