@@ -11,7 +11,6 @@
 	<div class="top-bar grid-x grid-padding-x" id="top-bar-menu">
 	
 		<div class="cell auto">
-			
 			<div class="site-branding show-for-sr">
 				<?php
 				if ( is_front_page() && is_home() ) :
@@ -39,7 +38,6 @@
 					<?php endif; ?>
 				</a></li>
 			</ul>
-						
 		</div>
 		<div class="top-bar-right show-for-tablet">
 			<div class="grid-x align-right">
@@ -47,7 +45,7 @@
 					<div class="grid-x align-right align-middle xlarge-flex-dir-row-reverse">
 						<?php if( get_field('playerfirst_login', 'option') ):?>
 						<div class="cell small-14 xlarge-shrink text-right">
-							<a class="playerfirst-login align-middle" href="<?php the_field('playerfirst_login');?>" target="_blank">
+							<a class="playerfirst-login align-middle" href="<?php the_field('playerfirst_login', 'option');?>" target="_blank">
 								<?php if( !empty( get_field('playerfirst_logo', 'option') ) ) {
 									$imgID = get_field('playerfirst_logo', 'option')['ID'];
 									$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );

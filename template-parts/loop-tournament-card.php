@@ -4,7 +4,7 @@
 			$imgID = get_field('logo')['ID'];
 			$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
 			$img = wp_get_attachment_image( $imgID, 'tournament-thumb', false, [ "class" => "", "alt"=>$img_alt] );
-			echo '<div class="img-wrap">';
+			echo '<div class="img-wrap text-center">';
 			echo $img;
 			echo '</div>';
 		}?>

@@ -61,6 +61,17 @@
 		@include breakpoint(medium) {
 			margin-top: -15.25rem;
 		}
+		.tournament-card {
+			.img-wrap {
+				height: 220px;
+				padding: 1.2rem 1.2rem 0;
+				img {
+					max-height: 100%;
+					width: auto;
+				}
+			}
+		}
+		
 	}
 	.news {
 		padding-top: 3rem;

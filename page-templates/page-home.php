@@ -175,8 +175,8 @@ $fields = get_fields();
 										$our_clubs_logos = $fields['our_clubs_logos'];
 									?>
 									<div class="grid-x grid-padding-x align-center">
-										<div class="cell small-12 medium-10">
-											<div class="club-logos grid-x grid-padding-x grid-12 small-up-2 tablet-up-3 large-up-4 align-middle">
+										<div class="cell small-14">
+											<div class="club-logos grid-x grid-padding-x grid-12 small-up-3 tablet-up-3 large-up-6 align-middle">
 												<?php foreach( $our_clubs_logos as $logo ):?>
 													<?php if( !empty( $logo ) ) {
 														$imgID = $logo['ID'];
@@ -401,12 +401,14 @@ $fields = get_fields();
 													endforeach;?>
 													</div>
 												</div>
-											</div>
-											<div class="swiper-btn swiper-btn-prev alumni-swiper-button-prev">
-												<?php get_template_part('template-parts/icon', 'slide-prev');?>
-											</div>
-											<div class="swiper-btn swiper-btn-next alumni-swiper-button-next">
-												<?php get_template_part('template-parts/icon', 'slide-next');?>
+												
+												<div class="swiper-btn swiper-btn-prev alumni-swiper-button-prev">
+													<?php get_template_part('template-parts/icon', 'slide-prev');?>
+												</div>
+												<div class="swiper-btn swiper-btn-next alumni-swiper-button-next">
+													<?php get_template_part('template-parts/icon', 'slide-next');?>
+												</div>
+												
 											</div>
 										</div>
 										<?php endif;?>

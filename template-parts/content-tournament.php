@@ -134,7 +134,7 @@ $fields = get_fields();
 							
 							<?php if( !empty($fields['contact_copy']) ):?>
 								<li class="accordion-item" data-accordion-item>
-									<a class="accordion-title text-gray-color h3" href="#">General Information</a>
+									<a class="accordion-title text-gray-color h3" href="#">Contact Information</a>
 									<div class="accordion-content" data-tab-content>
 										<?php echo $fields['contact_copy'];?>
 									</div>

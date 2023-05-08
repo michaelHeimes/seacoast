@@ -1,0 +1,18 @@
+.page-template-page-partners {
+	.entry-content {
+		.underlined-h2-wrap {
+			padding-bottom: 0.98rem;
+			@include breakpoint(medium) {
+				padding-bottom: 2.83rem;
+			}
+		}
+	}
+	.partner-rows {
+		.partner-row {
+			margin-bottom: 3rem;
+		}
+		.single-partner {
+			margin-bottom: 4rem;
+		}
+	}
+}

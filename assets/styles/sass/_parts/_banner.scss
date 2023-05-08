@@ -7,4 +7,17 @@ header.banner {
 			padding-bottom: 7.9375rem;
 		}
 	}
+	
+&.has-btns {
+	padding-bottom: 6.1545rem;
+	@include breakpoint(medium) {
+		padding-bottom: 6.9375rem;
+	}
+}
+	
+	.button-links {
+		> .cell {
+			margin-bottom: 1rem;
+		}
+	}
 }

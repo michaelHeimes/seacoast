@@ -96,7 +96,7 @@ $fields = get_fields();
 													</li>
 													<?php endif;?>
 													<?php if( !empty($email) ):?>
-													<li>Phone: <a class="text-gray-color" href="mailto:<?php echo $email;?>">
+													<li>Email: <a class="text-gray-color" href="mailto:<?php echo $email;?>">
 														<?php echo $email;?></a>
 													</li>
 													<?php endif;?>

@@ -43,7 +43,7 @@
 				}
 				
 					ul.submenu {
-						margin-top: 1rem;
+						margin-top: 1.64rem;
 					}
 				}
 				
@@ -70,7 +70,7 @@
 		@include breakpoint(tablet) {
 			width: 140px
 		}
-		@include breakpoint(largw) {
+		@include breakpoint(large) {
 			width: 160px;
 		}
 		li.logo {

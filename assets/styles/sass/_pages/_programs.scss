@@ -51,6 +51,9 @@
 	}
 	.contact-card {
 		padding: 2.08rem 2.5rem;
+		a {
+			transition: color .25s ease;
+		}
 	}
 	.has-sidebar {
 		h2 {

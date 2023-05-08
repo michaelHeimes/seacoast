@@ -21,6 +21,29 @@
             "endpoint": 0
         },
         {
+            "key": "field_64592bc14e9b2",
+            "label": "Style",
+            "name": "banner_style",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "image-background": "Image Background",
+                "video-background": "Video Background"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        },
+        {
             "key": "field_641e0db286515",
             "label": "Hero Image",
             "name": "hero_image",
@@ -28,7 +51,15 @@
             "type": "image",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64592bc14e9b2",
+                        "operator": "==",
+                        "value": "image-background"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -849,5 +880,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1682797330
+    "modified": 1683565622
 }
