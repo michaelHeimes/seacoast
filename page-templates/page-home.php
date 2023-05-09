@@ -17,11 +17,43 @@ $fields = get_fields();
 		
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				
-					<header class="entry-header home-hero has-object-fit">
-						<div class="bg bg-img" style="background-image: url(<?php echo $fields['hero_image']['url'];?>)"></div>
+					<header class="entry-header home-hero has-object-fit banner-style-<?php echo $fields['banner_style'];?>">						
 						<div class="bg bg-1"></div>
-						<?php if( !empty( $fields['hero_image'] ) ):?>
-							<div class="bg bg-img grayscale" style="background-image: url(<?php echo $fields['hero_image']['url'];?>)"></div>
+						<?php if( $fields['banner_style'] == 'image-background' ):?>
+							<?php if( !empty( $fields['hero_image'] ) ):?>
+								<div class="bg bg-img grayscale" style="background-image: url(<?php echo $fields['hero_image']['url'];?>)"></div>
+							<?php endif;?>
+						<?php endif;?>
+						
+						<?php if( $fields['banner_style'] == 'video-background' ):?>
+							<div class="bg bg-img">
+								<?php
+								
+								// Load value.
+								$iframe = $fields['hero_video'];
+								
+								// Use preg_match to find iframe src.
+								preg_match('/src="(.+?)"/', $iframe, $matches);
+								$src = $matches[1];
+								
+								// Add extra parameters to src and replace HTML.
+								$params = array(
+									'controls'   => 0,
+									'hd'         => 1,
+									'autohide'   => 1,
+									'background' => 1,
+								);
+								$new_src = add_query_arg($params, $src);
+								$iframe = str_replace($src, $new_src, $iframe);
+								
+								// Add extra attributes to iframe HTML.
+								$attributes = 'frameborder="0"';
+								$iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
+								
+								// Display customized HTML.
+								echo $iframe;
+								?>
+							</div>
 						<?php endif;?>
 						<div class="bg mask"></div>
 						<div class="bg bg-2"></div>
@@ -39,13 +71,13 @@ $fields = get_fields();
 						<div class="grid-container relative">
 							<div class="grid-x grid-padding-x align-center">
 								<?php if( !empty( $fields['news_events_heading'] ) ):?>
-								<div class="section-header cell small-14 large-12">
+								<div class="section-header relative cell small-14 large-12">
 									<h2 class="white-color yellow-bold"><?php echo str_replace(['<p>', '</p>'], '',$fields['news_events_heading']);?></h2>
 								</div>
 								<?php endif;?>
 							</div>
 						</div>
-						<div class="grid-container pr-0-mobile">
+						<div class="grid-container pr-0-mobile relative">
 							<div class="overflow-hidden">
 							<div class="grid-x grid-padding-x align-left">
 								<div class="cell small-12 large-offset-1">

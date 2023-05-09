@@ -77,6 +77,31 @@
             "preview_size": "medium"
         },
         {
+            "key": "field_645ab6e84afe1",
+            "label": "Hero Video",
+            "name": "hero_video",
+            "aria-label": "",
+            "type": "oembed",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64592bc14e9b2",
+                        "operator": "==",
+                        "value": "video-background"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "width": "",
+            "height": ""
+        },
+        {
             "key": "field_641e0dca86516",
             "label": "News & Events",
             "name": "",
@@ -880,5 +905,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1683565622
+    "modified": 1683666695
 }

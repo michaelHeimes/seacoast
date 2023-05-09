@@ -33,6 +33,15 @@
 	.entry-header {
 		padding-bottom: 15rem;
 		
+		iframe {
+			height: 100%;
+			width: 150vw;
+			transform: translateX(-25vw);
+			@media screen and (min-width: 1400px) {
+				height: 57vw;
+			}
+		}
+		
 		.bg.bg-1 {
 			background-image: linear-gradient(180deg, $heading-blue 0%, $blue-color 100%);
 		}
@@ -134,8 +143,14 @@
 		margin-top: -8.95rem;
 		padding-bottom: 0.8rem;
 		
+		.relative {
+			z-index: 1;
+		}
+		
 		.bg {
-			top: 4rem;
+			top: -4rem;
+			bottom: -4rem;
+			z-index: 1;
 			background-image: linear-gradient(180deg, rgba(106, 170, 228, 0) 0%, rgba(73, 144, 204, 0) 4.9%, $blue-color 15.8%, $heading-blue 36.5%, $heading-blue 100%);
 		}
 		
@@ -184,6 +199,7 @@
 	}
 	
 	.our-clubs {
+		z-index: 1;
 		padding-bottom: 3.25rem;
 		.bg {
 			bottom: 40rem;

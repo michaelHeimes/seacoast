@@ -218,9 +218,17 @@ $fields = get_fields();
                         $title = $fields['programs_cta']['title'];
                         $dates_type = $fields['programs_cta']['dates_type'];
                         $location = $fields['programs_cta']['location'];
-                        $page_link = $fields['programs_cta']['page_link'];
+                        $link = $fields['programs_cta']['link'];
+                        if( $link ) {
+                            $link_url = $link['url'];
+                            $link_title = $link['title'];
+                            $link_target = $link['target'] ? $link['target'] : '_self';
+                        }
                     ?>
-                    <a href="<?php echo esc_url($page_link);?>" class="inner white-bg grid-x flex-dir-column">
+                    <a class="inner white-bg grid-x flex-dir-column" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+                        <span class="show-for-sr">
+                            <?php echo esc_html( $link_title ); ?>
+                        </span>
                         <?php if( !empty( $image ) ) {
                             $imgID = $image['ID'];
                             $img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
