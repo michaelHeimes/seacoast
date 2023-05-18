@@ -16,6 +16,10 @@ header.banner {
 }
 	
 	.button-links {
+		padding-top: 3.3rem;
+		@include breakpoint(medium) {
+			padding-top: 2.3rem;
+		}
 		> .cell {
 			margin-bottom: 1rem;
 		}

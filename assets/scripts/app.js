@@ -185,7 +185,14 @@
             },
         });
     }
-        
+    
+    _app.home_about_facts_slider = function() {
+        const neSwiper = new Swiper(".aff-slider", {
+            slidesPerView: 1,
+            spaceBetween: 24,
+        });
+    }
+ 
     _app.alumni_slider = function() {
         const neSwiper = new Swiper(".alumni-slider", {
             slidesPerView: 1,
@@ -300,6 +307,7 @@
         
         // Custom Functions
         _app.news_events_slider();
+        _app.home_about_facts_slider();
         _app.alumni_slider();
         _app.staff_slider();
         _app.table_register_link();

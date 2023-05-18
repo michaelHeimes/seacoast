@@ -298,7 +298,7 @@ $fields = get_fields();
 												$text = $about_facts_figure['text'];
 											?>
 												<div class="cell ff-card text-center">
-													<div class="dark-blue-bg">
+													<div class="dark-blue-bg h-100">
 														<div class="inner">
 															<div class="text-wrap">
 																<p class="yellow-color heading-font uppercase">

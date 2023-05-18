@@ -35,7 +35,7 @@
 		
 		iframe {
 			height: 100%;
-			width: 150vw;
+			width: 165vw;
 			transform: translateX(-25vw);
 			@media screen and (min-width: 1400px) {
 				height: 57vw;
@@ -50,6 +50,7 @@
 			top: -8rem;
 			background-size: cover;
 			background-position: 50% 100%;
+			overflow: hidden;
 		}
 		
 		@include breakpoint(tablet down) {
@@ -303,6 +304,24 @@
 							font-size: rem-calc(80);
 							font-weight: 500;
 							line-height: .95;
+						}
+						p:nth-child(2) {
+							font-size: rem-calc(30);
+							line-height: .95;
+						}
+					}
+					@include breakpoint(tablet) {
+						p:nth-child(1) {
+							font-size: rem-calc(68);
+						}
+						p:nth-child(2) {
+							font-size: rem-calc(30);
+							line-height: .95;
+						}
+					}
+					@include breakpoint(xlarge) {
+						p:nth-child(1) {
+							font-size: rem-calc(80);
 						}
 						p:nth-child(2) {
 							font-size: rem-calc(30);

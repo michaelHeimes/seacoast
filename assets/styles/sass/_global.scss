@@ -79,7 +79,6 @@ a.button {
 	}
 	.small-heading {
 		margin: 0;
-		position: absolute;
 		width: 100%;
 		top: calc(50% + 0.1em);
 		transform: translateY(-50%);
@@ -100,6 +99,7 @@ a.button {
 			top: 50%;
 			transform: translateY(-50%);
 			@include breakpoint(tablet) {
+				position: absolute;
 				font-size: rem-calc(50);
 				top: 50%;
 			}

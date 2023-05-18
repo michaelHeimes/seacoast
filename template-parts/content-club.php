@@ -53,7 +53,7 @@ $fields = get_fields();
     <?php endif;?>
     
     <?php if( !empty( $fields['staff_heading']) || !empty( $fields['staff_text']) || !empty( $fields['staff_members'] ) ):?>
-    <section class="staff gradient-dl">
+    <section class="staff gradient-dl overflow-hidden">
         <div class="grid-container">
             <div class="grid-x grid-padding-x align-center">
                 <div class="cell small-14 large-12">
@@ -218,14 +218,8 @@ $fields = get_fields();
                         $title = $fields['programs_cta']['title'];
                         $dates_type = $fields['programs_cta']['dates_type'];
                         $location = $fields['programs_cta']['location'];
-                        $link = $fields['programs_cta']['link'];
-                        if( $link ) {
-                            $link_url = $link['url'];
-                            $link_title = $link['title'];
-                            $link_target = $link['target'] ? $link['target'] : '_self';
-                        }
                     ?>
-                    <a class="inner white-bg grid-x flex-dir-column" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+                    <div class="inner white-bg grid-x flex-dir-column">
                         <span class="show-for-sr">
                             <?php echo esc_html( $link_title ); ?>
                         </span>
@@ -251,8 +245,19 @@ $fields = get_fields();
                                 <?php endif;?>
                             </p>
                             <?php endif;?>
+                            <?php 
+                            $link = $fields['programs_cta']['link'];
+                            if( $link ): 
+                                $link_url = $link['url'];
+                                $link_title = $link['title'];
+                                $link_target = $link['target'] ? $link['target'] : '_self';
+                                ?>
+                            <div class="btn-wrap">
+                                <a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+                            </div>
+                            <?php endif; ?>
                         </div>
-                    </a>    
+                    </div>    
                     <?php endif;?>
                 </div>
             </div>
